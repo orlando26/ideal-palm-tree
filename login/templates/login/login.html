@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div data-role="page">
+    <div role="main" class="ui-content">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+
+            </div>
+            <div id="content" class="ui-block-b" style="text-align:center">
+
+                <form  action="/auth/" method="post">{% csrf_token %}
+                    <label class="t1" for="username">USUARIO</label>
+                    <input class="textbox" type="text" name="username" value="" id="username">
+                    <label class="t1" for="password">CONTRASE&#209;A</label>
+                    <input class="textbox" type="password" name="password" value="" id="password">
+                    <input class="boton_aceptar" type="submit" name="login_btn" value="ACEPTAR"
+                    <p>
+                    <!-- Etiqueta para mensajes de error -->
+                        <label>{{error_msg}}</label>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- /grid-a -->
+    </div>
+</div>
+
+{% endblock %}
