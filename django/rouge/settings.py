@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'rouge.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rouge_db',
-        'USER': 'root',
-        'PASSWORD': 'yNGmyM',
-        'HOST': '127.0.0.1',
+        'NAME': 'acsm_fbfa5215fb1344e',
+        'USER': 'b34cd3067cfe2f',
+        'PASSWORD': '6ac8eecb',
+        'HOST': 'us-cdbr-azure-east-c.cloudapp.net',
         'PORT': '3306',
     }
 }
