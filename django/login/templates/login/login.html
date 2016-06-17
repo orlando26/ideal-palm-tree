@@ -1,23 +1,66 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <div data-role="page">
     <div role="main" class="ui-content">
         <div class="ui-grid-a">
             <div class="ui-block-a">
-
+                <table class="center" border="1">
+                    <tr>
+                        <td class="celda">
+                            <button class="boton_numero">1</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">2</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">3</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="boton_numero">4</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">5</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">6</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="boton_numero">7</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">8</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">9</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="boton_numero">#</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">0</button>
+                        </td>
+                        <td>
+                            <button class="boton_numero">*</button>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <div id="content" class="ui-block-b" style="text-align:center">
 
-                <form  action="/auth/" method="post">{% csrf_token %}
+                <form action="/auth/" method="post">{% csrf_token %}
                     <label class="t1" for="username">USUARIO</label>
                     <input class="textbox" type="text" name="username" value="" id="username">
                     <label class="t1" for="password">CONTRASE&#209;A</label>
                     <input class="textbox" type="password" name="password" value="" id="password">
                     <button class="boton_aceptar" name="login_btn">Aceptar</button>
                     <p>
-                    <!-- Etiqueta para mensajes de error -->
+                        <!-- Etiqueta para mensajes de error -->
                         <label>{{error_msg}}</label>
                     </p>
                 </form>
