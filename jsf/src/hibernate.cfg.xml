@@ -11,12 +11,12 @@
 <hibernate-configuration>
     <session-factory>
         <!-- Database connection settings -->
-        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
 
         <!-- SQL Azure connection settings -->
-		<property name="connection.url">jdbc:sqlserver://iotserver1.database.windows.net:1433;database=Appdb;encrypt=true;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</property>
-		<property name="connection.username">orlando</property>
-		<property name="connection.password">16119321oO</property>
+		<property name="connection.url">jdbc:mysql://us-cdbr-azure-east-c.cloudapp.net:3306/acsm_fbfa5215fb1344e</property>
+		<property name="connection.username">b34cd3067cfe2f</property>
+		<property name="connection.password">6ac8eecb</property>
 
         <!-- JDBC connection pool (use C3P0) -->
 		<property name="hibernate.c3p0.min_size">5</property>
@@ -25,7 +25,7 @@
 		<property name="hibernate.c3p0.max_statements">100</property>
 
         <!-- SQL dialect -->
-        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- Enable Hibernate's automatic session context management -->
         <property name="current_session_context_class">thread</property>
@@ -39,6 +39,6 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="org.losdeveloperos.roomies.db.AppUser" />
+        <mapping class="org.rouge.db.User" />
     </session-factory>
 </hibernate-configuration>

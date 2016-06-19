@@ -21,6 +21,7 @@
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
+
 <h:body>
 	<div data-role="page">
 		<div role="main" class="ui-content">
@@ -55,20 +56,20 @@
 
 				<div id="content" class="ui-block-b" style="text-align: center">
 
-					<form style="margin: 5vh 5vw 0 5vw" action="/auth/" method="post">
+					<h:form style="margin: 5vh 5vw 0 5vw" action="/auth/" method="post">
 						<label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
 						<input class="textbox" type="text" name="username" value=""
 							id="username-textfield" /> <label class="t1" for="password"
 							style="margin: 6vh 0;">CONTRASE&#209;A</label> <input
 							class="textbox" type="password" name="password" value=""
 							id="password" />
-
-						<button class="boton_aceptar">ENTRAR</button>
+						<c:set var="auth" value="#{ContextBeans.authentication}"></c:set>
+						<p:commandButton styleClass="boton_aceptar" value="Entrar" actionListener="#{auth.test}"></p:commandButton>
 						<p>
 							<!-- Etiqueta para mensajes de error -->
 							<label></label>
 						</p>
-					</form>
+					</h:form>
 				</div>
 			</div>
 			<!-- /grid-a -->
