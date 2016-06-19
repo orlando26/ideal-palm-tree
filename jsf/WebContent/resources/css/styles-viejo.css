@@ -1,0 +1,97 @@
+*{
+	font-family:"Open Sans" "Helvetica" "Sans-Serif" !important;
+}
+
+.t1 {
+	font-size: 35px !important;
+}
+
+.textbox {
+	height: 11.5vh !important;
+	padding: 0 !important;
+	font-size: 35px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	min-height: 0 !important;
+	-webkit-box-shadow:inset 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow:inset 0px 11px 10px 0px rgba(0,0,0,0.19);
+	box-shadow:inset 0px 11px 10px 0px rgba(0,0,0,0.19);
+}
+
+.boton{
+    text-align:center !important;
+    margin : 0px auto !important;
+}
+.boton_aceptar {
+	margin: 8vh 0;
+	background:#7BB241 !important;
+	color:#FBFAFA !important;
+	height: 11.5vh !important;
+	padding: 0 !important;
+	font-size: 35px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+}
+
+.boton_aceptar:active{
+	background: #86BB4A !important;
+}
+.sombra {
+	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+}
+
+.boton_borrar {
+	background:#EE524F;
+	color:#FBFAFA;
+	height: 11.5vh !important;
+	padding: 0 !important;
+	font-size: 35px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+}
+
+.boton_borrar:active{
+	background: #F86B59 !important;
+}
+.boton_numero {
+	margin: 0 !important;
+	background:#FBFAFA;
+	color:#414142;
+	height: 13vh !important;
+	width: 8vw !important;
+	padding: 0 !important;
+	font-size: 35px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+}
+
+.boton_numero:active{
+	background: #4A4A4B !important;
+}
+table.center {
+    margin-left:auto !important; 
+    margin-right:auto !important;
+ }
+ table { 
+    border-collapse: separate;
+    border-spacing: 4vw 4vh;
+}
