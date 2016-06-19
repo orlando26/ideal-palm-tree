@@ -19,15 +19,6 @@ public class ContextBeans implements Serializable{
 	private Auth authentication;
 
 	/**
-	 * @return the auth
-	 */
-	
-
-	public void print(){
-		System.out.println("dsadj;aslkdl;lkda");
-	}
-
-	/**
 	 * @return the authentication
 	 */
 	public Auth getAuthentication() {
