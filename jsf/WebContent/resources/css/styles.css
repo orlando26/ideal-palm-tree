@@ -1,5 +1,5 @@
 *{
-	font-family:"Open Sans" "Helvetica" "Sans-Serif" !important;
+	font-family: 'Open Sans', sans-serif; !important;
 	font-size: 25px !important;
 }
 
@@ -24,21 +24,15 @@ input.textbox {
 	text-shadow:none !important;
 	border: 0px !important;
 	min-height: 0 !important;
-	-webkit-box-shadow:inset 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow:inset 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow:inset 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
 }
 
-input.textbox:hover {
-	margin: 0 !important;
-	height: 11.5vh !important;
-	padding: 0 !important;
-	font-size: 30px !important;
-	font-weight: normal;
-	border-radius:0px !important;
-	text-shadow:none !important;
-	border: 0px !important;
-	min-height: 0 !important;
+.ui-focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
 }
 .boton{
     text-align:center !important;
@@ -63,11 +57,19 @@ input.textbox:hover {
 
 .boton_aceptar:active{
 	background: #86BB4A !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.boton_aceptar:focus{
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
 .sombra {
-	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
 }
 
 .boton_borrar {
@@ -82,26 +84,42 @@ input.textbox:hover {
 	border-radius:0px !important;
 	text-shadow:none !important;
 	border: 0px !important;
-	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
 }
 .boton_borrar:active{
 	background: #F86B59 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.boton_borrar:focus{
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
 .sidebar{
-	float: right !important;
-	width: 2vw !important;
 	height: 100vh !important;
 	background: #ed5351 !important;
 }
 .datos {
-	
-	width:30vw !important;
+	margin: 0 !important;
+	background: #EDEDED;
 	height: 100vh !important;
-	-webkit-box-shadow: 11px 0px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 11px 0px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 11px 0px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19);
+	border: 0 !important;
+	text-align: center !important;
+}
+.reloj {
+	margin: 0 !important;
+	padding: 0 !important;
+	background: white !important;
+	height: 100vh !important;
+	border: 0 !important;
+	text-align: center !important;
 
 }
 .boton_numero {
@@ -117,13 +135,21 @@ input.textbox:hover {
 	border-radius:0px !important;
 	text-shadow:none !important;
 	border: 0px !important;
-	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
 }
 
 .boton_numero:active{
 	background: #4A4A4B !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.boton_numero:focus{
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
 table.center {
     margin-left:auto !important; 
