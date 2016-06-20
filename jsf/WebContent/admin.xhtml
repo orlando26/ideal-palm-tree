@@ -21,24 +21,38 @@
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
-<c:set var="reg" value="#{ContextBeans.register}"/>
+<c:set var="reg" value="#{ContextBeans.register}" />
 <h:body>
-	<h:panelGrid columns="2">
-		<label>Nombre</label>
-		<h:outputText value="#{reg.name}"></h:outputText>
-		<label>Contrasena</label>
-		<h:outputText value="#{reg.password}"></h:outputText>
-		<label>Email</label>
-		<h:outputText value="#{reg.email}"></h:outputText>
-		<label>Telefono</label>
-		<h:outputText value="#{reg.phone}"></h:outputText>
-		<label>BOTON</label>
-		<h:outputText value="#{reg.active}"></h:outputText>
-		<label>Jefe</label>
-		<h:outputText value="#{reg.boss}"></h:outputText>
-		<label>Perfil</label>
-		<h:outputText value="#{reg.profile}"></h:outputText>
+	<h:form>
+		<h:panelGrid columns="2">
+			<label>Nombre</label>
+			<h:inputText value="#{reg.name}"></h:inputText>
+			
+			<label>Contrasena</label>
+			<h:inputText value="#{reg.password}"></h:inputText>
+			
+			<label>Email</label>
+			<h:inputText value="#{reg.email}"></h:inputText>
+			
+			<label>Telefono</label>
+			<h:inputText value="#{reg.phone}"></h:inputText>
+			
+			<label>Active</label>
+			<h:inputText value="#{reg.active}"></h:inputText>
+			
+			<label>Jefe</label>
+			<h:inputText value="#{reg.boss}"></h:inputText>
+			
+			<label>statu</label>
+			<h:inputText value="#{reg.profile}"></h:inputText>
+			
+			<label>Perfil</label>
+			<h:inputText value="#{reg.profile}"></h:inputText>
+
+		</h:panelGrid>
 		
-	</h:panelGrid>
+		<p:commandButton value="Registrar" actionListener="#{reg.register}"></p:commandButton>
+	</h:form>
+
 </h:body>
 </html>

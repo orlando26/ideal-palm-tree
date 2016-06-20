@@ -24,56 +24,106 @@
 
 <h:body>
 	<div data-role="page">
-		<div role="main" class="ui-content">
-			<div class="ui-grid-a">
+        <div role="main" class="ui-content, pag">
+            <table class="sinmargenes, pag">
+                <tr>
+                    <td style="width:50%">
+                        <div style="margin:0 5vw 0 5vw; text-align:center">
+                            <table class="center">
+                                <tr>
+                                    <td>
+                                        <button class="boton_numero">1</button>
+                                    </td>
+                                    <td width="30vw"></td>
+                                    <td>
+                                        <button class="boton_numero">2</button>
+                                    </td>
+                                    <td width="30vw"></td>
+                                    <td>
+                                        <button class="boton_numero">3</button>
+                                    </td>
+                                </tr>
+                                <tr height="15vh"></tr>
+                                <tr>
+                                    <td>
+                                        <button class="boton_numero">4</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button class="boton_numero">5</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button class="boton_numero">6</button>
+                                    </td>
+                                </tr>
+                                <tr height="15vh"></tr>
+                                <tr>
+                                    <td>
+                                        <button class="boton_numero">7</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button class="boton_numero">8</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button class="boton_numero">9</button>
+                                    </td>
+                                </tr>
+                                <tr height="15vh"></tr>
+                                <tr>
+                                    <td>
+                                        <button class="boton_numero">#</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button class="boton_numero">0</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button class="boton_numero">*</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td style="width:50%">
+                        <form style="margin:0 5vw 0 5vw; text-align:center" action="/auth/" method="post">
+                            <div style="position: relative; top:-3vh">
+                                <label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
+                            </div>
+                            <div>
+                                <input class="textbox" type="text" name="username" value="" id="username"/>
+                            </div>
+                            <div style="position: relative; top: 7vh">
+                                <label class="t1" for="password" style="margin: 6vh 0;">CONTRASE&#209;A</label>
+                            </div>
+                            <div style="position: relative; top: 9.5vh">
+                                <input class="textbox" type="password" name="password" value="" id="password"/>
+                            </div>
 
-				<div class="ui-block-a" style="text-align: center">
-					<table class="center">
-						<tr>
-							<td class="celda"><button class="boton_numero">1</button></td>
-							<td><button class="boton_numero">2</button></td>
-							<td><button class="boton_numero">3</button></td>
-						</tr>
-						<tr>
-							<td><button class="boton_numero">4</button></td>
-							<td><button class="boton_numero">5</button></td>
-							<td><button class="boton_numero">6</button></td>
-						</tr>
-						<tr>
-							<td><button class="boton_numero">7</button></td>
-							<td><button class="boton_numero">8</button></td>
-							<td><button class="boton_numero">9</button></td>
-						</tr>
-						<tr>
-							<td><button class="boton_numero">#</button></td>
-							<td><button class="boton_numero">0</button></td>
-							<td><button class="boton_numero">*</button></td>
-						</tr>
-					</table>
-					<button class="boton_borrar">BORRAR</button>
-
-				</div>
-
-				<div id="content" class="ui-block-b" style="text-align: center">
-
-					<h:form style="margin: 5vh 5vw 0 5vw" action="/auth/" method="post">
-						<label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
-						<input class="textbox" type="text" name="username" value=""
-							id="username-textfield" /> <label class="t1" for="password"
-							style="margin: 6vh 0;">CONTRASE&#209;A</label> <input
-							class="textbox" type="password" name="password" value=""
-							id="password" />
-						<c:set var="auth" value="#{ContextBeans.authentication}"></c:set>
-						<p:commandButton styleClass="boton_aceptar" value="Entrar" actionListener="#{auth.test}"></p:commandButton>
-						<p>
-							<!-- Etiqueta para mensajes de error -->
-							<label></label>
-						</p>
-					</h:form>
-				</div>
-			</div>
-			<!-- /grid-a -->
-		</div>
-	</div>
+                            <p>
+                                <!-- Etiqueta para mensajes de error -->
+                                <label></label>
+                            </p>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="margin:0 5vw 0 5vw; text-align:center">
+                            <button class="boton_borrar">BORRAR</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="margin:0 5vw 0 5vw; text-align:center">
+                            <button class="boton_aceptar">ENTRAR</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </h:body>
 </html>
