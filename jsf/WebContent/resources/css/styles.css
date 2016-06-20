@@ -14,6 +14,17 @@
 	padding:0 !important;
 }
 
+.t2 {
+	font-size: 25px !important;
+	margin: 0 !important;
+	padding:0 !important;
+}
+
+.t3 {
+	font-size: 20px !important;
+	margin: 0 !important;
+	padding:0 !important;	
+}
 input.textbox {
 	margin: 0 !important;
 	height: 11.5vh !important;
@@ -99,28 +110,32 @@ input.textbox {
 	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
-.sidebar{
-	height: 100vh !important;
-	background: #ed5351 !important;
-}
 .datos {
 	margin: 0 !important;
+	padding: 0 !important;
 	background: #EDEDED;
-	height: 100vh !important;
-	-webkit-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19);
 	border: 0 !important;
 	text-align: center !important;
+	max-height: 100% !important;
+
+}
+.sidebar{
+	background: #ed5351 !important;
+	margin: 0 !important;
+	padding: 0!important;
+	border: 0 !important;
+	max-height: 100% !important;
 }
 .reloj {
 	margin: 0 !important;
 	padding: 0 !important;
 	background: white !important;
-	height: 100vh !important;
 	border: 0 !important;
 	text-align: center !important;
-
+	max-height: 100% !important;
+	-webkit-box-shadow:inset 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow:inset 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow:inset 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
 }
 .boton_numero {
 	margin: 0 !important;
@@ -173,4 +188,9 @@ table {
 }
 table.sinmargenes {
 	border-spacing: 0;
+}
+.userimage {
+	border-radius: 50% !important;
+	width: 20vw !important;
+	height: auto;
 }
