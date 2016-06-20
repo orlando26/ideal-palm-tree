@@ -25,4 +25,8 @@ public class Auth extends Form{
 		
 		HibernateSession.saveObject(user);
 	}
+	
+	public void print(){
+		System.out.println("test primefaces method");
+	}
 }

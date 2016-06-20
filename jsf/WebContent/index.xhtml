@@ -12,19 +12,16 @@
 <f:view renderKitId="PRIMEFACES_MOBILE" />
 <h:head>
 	<title>Rouge</title>
-	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-</h:head>
-<f:facet name="postinit">
-	<link rel="stylesheet"
-		href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<h:outputStylesheet library="css" name="styles.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
+	<h:outputScript library="js" name="jquery.js" />
 	<h:outputScript library="js" name="scripts.js" />
-</f:facet>
-
+</h:head>
 <h:body>
 	<div data-role="page">
         <div role="main" class="ui-content, pag">
+        
+	<h:commandButton value="boton"></h:commandButton>
             <table class="sinmargenes, pag">
                 <tr>
                     <td style="width:50%">
@@ -89,36 +86,38 @@
                         </div>
                     </td>
                     <td style="width:50%">
-                        <form style="margin:0 5vw 0 5vw; text-align:center" action="/auth/" method="post">
+                        <h:form style="margin:0 5vw 0 5vw;" id="login-form">
+                        	<c:set var="auth" value="#{ContextBeans.authentication}"/>
                             <div style="position: relative; top:-3vh">
                                 <label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
                             </div>
                             <div>
-                                <input class="textbox" type="text" name="username" value="" id="username"/>
+                                <h:inputText class="textbox" id="username"/>
                             </div>
                             <div style="position: relative; top: 7vh">
                                 <label class="t1" for="password" style="margin: 6vh 0;">CONTRASE&#209;A</label>
                             </div>
                             <div style="position: relative; top: 9.5vh">
-                                <input class="textbox" type="password" name="password" value="" id="password"/>
+                                <h:inputSecret class="textbox" id="password"/>
                             </div>
 
                             <p>
                                 <!-- Etiqueta para mensajes de error -->
                                 <label></label>
                             </p>
-                        </form>
+                            <h:commandButton value="boton"></h:commandButton>
+                        </h:form>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div style="margin:0 5vw 0 5vw; text-align:center">
-                            <button class="boton_borrar">BORRAR</button>
+                            <button class="boton_borrar" id="boton_borrar">BORRAR</button>
                         </div>
                     </td>
                     <td>
                         <div style="margin:0 5vw 0 5vw; text-align:center">
-                            <button class="boton_aceptar">ENTRAR</button>
+                            <p:commandButton styleClass="boton_aceptar" value="Entrar"></p:commandButton>
                         </div>
                     </td>
                 </tr>
