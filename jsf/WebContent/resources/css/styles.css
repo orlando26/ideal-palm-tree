@@ -1,78 +1,196 @@
-body {
-	background:white;
-	font-size:40px;
-	font-family:"Helvetica";
-	text-align:center;
-	line-height: 5px;
-	height:1000px;
-	width: 100%;
-}
-h1 {
-	color:#414142;
-	font-size:1em;
-
-
-
-}
-h2 {
-	color:#FBFAFA;
-	font-size:1em;
+*{
+	font-family: 'Open Sans', sans-serif; !important;
+	font-size: 25px !important;
 }
 
-h4 {
-	color:#414142;
-	font-size:1em;
-	text-transform: capitalize;
-
-}
-h5 {
-	color:#414142;
-	font-size:0.80em;
-	text-transform: capitalize;
-}
-.contenedor {
-	background:#EEEEEE;
-	color:#414142;
-	width:39.45%;
-	height: 100%;
-	margin: 0px;
-	
-	float: left;
+.pag {
+	width: 100vw !important;
+	height: 100vh !important;
 }
 
+.t1 {
+	font-size: 30px !important;
+	margin: 0 !important;
+	padding:0 !important;
+}
+
+.t2 {
+	font-size: 25px !important;
+	margin: 0 !important;
+	padding:0 !important;
+}
+
+.t3 {
+	font-size: 20px !important;
+	margin: 0 !important;
+	padding:0 !important;	
+}
+input.textbox {
+	margin: 0 !important;
+	height: 11.5vh !important;
+	padding: 0 !important;
+	font-size: 30px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	min-height: 0 !important;
+	-webkit-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
+}
+
+.ui-focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+}
+.boton{
+    text-align:center !important;
+    margin : 0px auto !important;
+}
 .boton_aceptar {
-	background:#7BB241;
-	color:#FBFAFA;
-	font-size:1em;
-	width: 34.82%;
-	height: 6.72%;
-	line-height: 170%;
-	text-align:center;
-	display: block;
-	margin: 0 0 0 33%;
-	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	/*margin: 8vh 0;*/
+	background:#7BB241 !important;
+	color:#FBFAFA !important;
+	height: 11.5vh !important;
 
+	padding: 0 !important;
+	font-size: 30px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+}
+
+.boton_aceptar:active{
+	background: #86BB4A !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.boton_aceptar:focus{
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
 .sombra {
-	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
 }
 
 .boton_borrar {
-	background:#EE524F;
-	color:#FBFAFA;
-	font-size:1em;
-	width: 34.82%;
-	height: 6.72%;
-	line-height: 170%;
-	text-align:center;
-	display: block;
-	margin: 0 0 0 33%;
-	-webkit-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 11px 10px 0px rgba(0,0,0,0.19);
+	/*margin: 8vh 0;*/
+	background: #ED5351 !important;
+	color:#FBFAFA !important;
+	height: 11.5vh !important;
+	
+	padding: 0 !important;
+	font-size: 30px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+}
+.boton_borrar:active{
+	background: #F86B59 !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.boton_borrar:focus{
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+}
+.datos {
+	margin: 0 !important;
+	padding: 0 !important;
+	background: #EDEDED;
+	border: 0 !important;
+	text-align: center !important;
+	max-height: 100% !important;
 
+}
+.sidebar{
+	background: #ed5351 !important;
+	margin: 0 !important;
+	padding: 0!important;
+	border: 0 !important;
+	max-height: 100% !important;
+}
+.reloj {
+	margin: 0 !important;
+	padding: 0 !important;
+	background: white !important;
+	border: 0 !important;
+	text-align: center !important;
+	max-height: 100% !important;
+	-webkit-box-shadow:inset 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow:inset 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow:inset 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+}
+.boton_numero {
+	margin: 0 !important;
+	text-align: center;
+	background:#FBFAFA;
+	color:#414142;
+	height: 13vh !important;
+	width: 11vw !important;
+	padding: 0 !important;
+	font-size: 30px !important;
+	font-weight: normal;
+	border-radius:0px !important;
+	text-shadow:none !important;
+	border: 0px !important;
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+}
+
+.boton_numero:active{
+	background: #4A4A4B !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.boton_numero:focus{
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+}
+table.center {
+    margin-left:auto !important; 
+    margin-right:auto !important;
+}
+form.center {
+    margin-left:auto !important; 
+    margin-right:auto !important;
+}
+tr.center {
+    margin-left:auto !important; 
+    margin-right:auto !important;
+}
+td.center {
+    margin-left:auto !important; 
+    margin-right:auto !important;
+}
+table { 
+    border-collapse: separate;
+    border-spacing: initial;  
+}
+table.sinmargenes {
+	border-spacing: 0;
+}
+.userimage {
+	border-radius: 50% !important;
+	width: 20vw !important;
+	height: auto;
 }
