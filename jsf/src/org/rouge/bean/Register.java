@@ -1,7 +1,11 @@
 package org.rouge.bean;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
 import org.rouge.db.User;
 import org.rouge.hibernate.HibernateSession;
+import org.rouge.model.UserModel;
 
 public class Register extends Form{
 
@@ -13,6 +17,8 @@ public class Register extends Form{
 	private String name;
 	
 	private String password;
+	
+	private String confirmPasword;
 	
 	private String email;
 	
@@ -27,19 +33,35 @@ public class Register extends Form{
 	private Integer profile;
 	
 	
-	public void register(){
-		User user = new User();
-		
-		user.setName(name);
-		user.setPassword(password);
-		user.setEmail(email);
-		user.setPhone(phone);
-		user.setActive(active);
-		user.setBoss(boss);
-		user.setProfile(profile);
-		user.setStatus(status);
-		
-		HibernateSession.saveObject(user);
+	public void registerUser(){ 
+		FacesContext context = FacesContext.getCurrentInstance();
+		if(password.equals(confirmPasword)){
+			User user;
+			user = new User();
+			
+			user.setName(name);
+			user.setPassword(Integer.toHexString(password.hashCode()));
+			user.setEmail(email);
+			user.setPhone(phone);
+			user.setActive(active);
+			user.setBoss(boss);
+			user.setProfile(profile);
+			user.setStatus(status);
+			
+			if(!UserModel.findByUserName(user.getName()).isEmpty()){
+				context.addMessage(null, new FacesMessage("Error",  "El usuario " + user.getName() + " ya existe"));
+			}else{
+				context.addMessage(null, new FacesMessage("Registro exitoso",  "El usuario " + user.getName() + " se registro exitosamente"));
+				HibernateSession.saveObject(user);
+				redirect("/index.xhtml");
+			}
+		}else{
+			context.addMessage(null, new FacesMessage("Error",  "Las contrase�as no coinciden "));
+		}
+	}
+	
+	public void print(){
+		System.out.println("sdsadas");
 	}
 	
 	/*
@@ -107,5 +129,19 @@ public class Register extends Form{
 
 	public void setProfile(Integer profile) {
 		this.profile = profile;
+	}
+
+	/**
+	 * @return the confirmPasword
+	 */
+	public String getConfirmPasword() {
+		return confirmPasword;
+	}
+
+	/**
+	 * @param confirmPasword the confirmPasword to set
+	 */
+	public void setConfirmPasword(String confirmPasword) {
+		this.confirmPasword = confirmPasword;
 	}
 }

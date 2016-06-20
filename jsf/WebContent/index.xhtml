@@ -18,111 +18,108 @@
 	<h:outputScript library="js" name="scripts.js" />
 </h:head>
 <h:body>
-	<div data-role="page">
-        <div role="main" class="ui-content, pag">
-        
-	<h:commandButton value="boton"></h:commandButton>
-            <table class="sinmargenes, pag">
-                <tr>
-                    <td style="width:50%">
-                        <div style="margin:0 5vw 0 5vw; text-align:center">
-                            <table class="center">
-                                <tr>
-                                    <td>
-                                        <button class="boton_numero">1</button>
-                                    </td>
-                                    <td width="30vw"></td>
-                                    <td>
-                                        <button class="boton_numero">2</button>
-                                    </td>
-                                    <td width="30vw"></td>
-                                    <td>
-                                        <button class="boton_numero">3</button>
-                                    </td>
-                                </tr>
-                                <tr height="15vh"></tr>
-                                <tr>
-                                    <td>
-                                        <button class="boton_numero">4</button>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <button class="boton_numero">5</button>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <button class="boton_numero">6</button>
-                                    </td>
-                                </tr>
-                                <tr height="15vh"></tr>
-                                <tr>
-                                    <td>
-                                        <button class="boton_numero">7</button>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <button class="boton_numero">8</button>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <button class="boton_numero">9</button>
-                                    </td>
-                                </tr>
-                                <tr height="15vh"></tr>
-                                <tr>
-                                    <td>
-                                        <button class="boton_numero">#</button>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <button class="boton_numero">0</button>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <button class="boton_numero">*</button>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </td>
-                    <td style="width:50%">
-                        <h:form style="margin:0 5vw 0 5vw;" id="login-form">
-                        	<c:set var="auth" value="#{ContextBeans.authentication}"/>
-                            <div style="position: relative; top:-3vh">
-                                <label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
-                            </div>
-                            <div>
-                                <h:inputText class="textbox" id="username"/>
-                            </div>
-                            <div style="position: relative; top: 7vh">
-                                <label class="t1" for="password" style="margin: 6vh 0;">CONTRASE&#209;A</label>
-                            </div>
-                            <div style="position: relative; top: 9.5vh">
-                                <h:inputSecret class="textbox" id="password"/>
-                            </div>
+	<h:form id="login-form">
+		<div data-role="page">
+			<div role="main" class="ui-content, pag">
+				<table class="sinmargenes, pag">
+					<tr>
+						<td style="width: 50%">
+							<div style="margin: 0 5vw 0 5vw; text-align: center">
+								<table class="center">
+									<tr>
+										<td>
+											<button class="boton_numero">1</button>
+										</td>
+										<td width="30vw"></td>
+										<td>
+											<button class="boton_numero">2</button>
+										</td>
+										<td width="30vw"></td>
+										<td>
+											<button class="boton_numero">3</button>
+										</td>
+									</tr>
+									<tr height="15vh"></tr>
+									<tr>
+										<td>
+											<button class="boton_numero">4</button>
+										</td>
+										<td></td>
+										<td>
+											<button class="boton_numero">5</button>
+										</td>
+										<td></td>
+										<td>
+											<button class="boton_numero">6</button>
+										</td>
+									</tr>
+									<tr height="15vh"></tr>
+									<tr>
+										<td>
+											<button class="boton_numero">7</button>
+										</td>
+										<td></td>
+										<td>
+											<button class="boton_numero">8</button>
+										</td>
+										<td></td>
+										<td>
+											<button class="boton_numero">9</button>
+										</td>
+									</tr>
+									<tr height="15vh"></tr>
+									<tr>
+										<td>
+											<button class="boton_numero">#</button>
+										</td>
+										<td></td>
+										<td>
+											<button class="boton_numero">0</button>
+										</td>
+										<td></td>
+										<td>
+											<button class="boton_numero">*</button>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+						<td style="width: 50%"><div style="margin: 0 5vw 0 5vw;">
+								<c:set var="auth" value="#{ContextBeans.authentication}" />
+								<div style="position: relative; top: -3vh">
+									<label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
+								</div>
+								<div>
+									<h:inputText class="textbox" value="#{auth.userName}" id="username" />
+								</div>
+								<div style="position: relative; top: 7vh">
+									<label class="t1" for="password" style="margin: 6vh 0;">CONTRASE&#209;A</label>
+								</div>
+								<div style="position: relative; top: 9.5vh">
+									<h:inputSecret class="textbox" value="#{auth.password}" id="password" />
+								</div>
 
-                            <p>
-                                <!-- Etiqueta para mensajes de error -->
-                                <label></label>
-                            </p>
-                            <h:commandButton value="boton"></h:commandButton>
-                        </h:form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div style="margin:0 5vw 0 5vw; text-align:center">
-                            <button class="boton_borrar" id="boton_borrar">BORRAR</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div style="margin:0 5vw 0 5vw; text-align:center">
-                            <p:commandButton styleClass="boton_aceptar" value="Entrar"></p:commandButton>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
+								<p>
+									<!-- Etiqueta para mensajes de error -->
+									<label></label>
+								</p>
+							</div></td>
+					</tr>
+					<tr>
+						<td>
+							<div style="margin: 0 5vw 0 5vw; text-align: center">
+								<button class="boton_borrar" id="boton_borrar">BORRAR</button>
+							</div>
+						</td>
+						<td>
+							<div style="margin: 0 5vw 0 5vw; text-align: center">
+								<p:commandButton styleClass="boton_aceptar" actionListener="#{auth.print}" value="Entrar"></p:commandButton>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</h:form>
 </h:body>
 </html>
