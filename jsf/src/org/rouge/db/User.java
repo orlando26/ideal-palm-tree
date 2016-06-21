@@ -16,44 +16,48 @@ public class User {
 	@GeneratedValue
 	@Column(name = "usr_id")
 	private Long id;
-	
+
 
 	//Id del perfil de usuario
 	@Column(name = "usr_usp_id")
 	private Integer profile;
-	
+
 
 	//Correo electronico
 	@Column(name = "usr_email")
 	private String email;
-	
+
 
 	//Nombre completo
 	@Column(name = "usr_name")
 	private String name;
-	
+
+	//Nombre de usuario
+	@Column(name = "usr_username")
+	private String username;
+
 
 	//Contrasenia
 	@Column(name = "usr_pwd")
 	private String password;
-	
+
 
 	//Numeo telefonico con lada
 	@Column(name = "usr_phone")
 	private String phone;
-	
+
 	//Id del jefe del usuario (si es que tiene)
 	@Column(name = "usr_boss_id")
 	private Long boss;
-	
+
 	//Id del status del usuario
 	@Column(name = "usr_ust_id")
 	private Integer status;
-	
+
 	//Si el usuario se encuentra activo ('Y') o inactivo ('N')
 	@Column(name = "usr_active")
 	private String active;
-	
+
 	/** Getters & Setters */
 
 	public Long getId() {
@@ -127,5 +131,13 @@ public class User {
 	public void setActive(String active) {
 		this.active = active;
 	}
-		
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 }
