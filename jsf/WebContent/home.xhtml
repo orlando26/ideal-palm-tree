@@ -13,8 +13,10 @@
 <h:head>
 	<title>Rouge</title>
 	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="clock.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="jquery.js" />
+	<h:outputScript library="js" name="clock.js" />
 	<h:outputScript library="js" name="scripts.js" />
 </h:head>
 
@@ -24,19 +26,29 @@
 			<div class="datos ui-bar ui-bar-a" style="height: 100vh">
 				<div style="margin: 5vh 0 0 0">
 					<h:graphicImage class="userimage"
-						value="resources/images/userSquare.png"/>
-						<label class="t2">Nombre Apellido</label>
-						<label class="t3">Compa&#241;&#237;a</label>
-						<label class="t3">Matr&#237;cula</label>
-						<label class="t4">#7</label>
+						value="resources/images/userSquare.png" />
+					<label class="t2">Nombre Apellido</label> <label class="t3">Compa&#241;&#237;a</label>
+					<label class="t3">Matr&#237;cula</label> <label class="t4">#7</label>
 				</div>
 			</div>
 		</div>
 		<div class="ui-block-b" style="width: 58%">
 			<div class="reloj ui-bar ui-bar-a" style="height: 100vh">
 				<div style="margin: 5vh 0 0 0">
-					<label class="t3">Mapa</label><h:graphicImage class="mapbut"
-						value="resources/images/map.png"/>
+					<div id="clock">
+						<div id="hour" style="transform: rotate(334.5deg);">
+							<img src="http://demo.web3designs.com/images/hourhand.png"/>
+						</div>
+						<div id="minute" style="transform: rotate(54deg);">
+							<img src="http://demo.web3designs.com/images/minhand.png"/>
+						</div>
+						<div id="second" style="transform: rotate(108deg);">
+							<img src="http://demo.web3designs.com/images/sechand.png"/>
+						</div>
+					</div>
+					<label class="t3">Mapa</label>
+					<h:graphicImage id="map-btn" class="mapbut"
+						value="resources/images/map.png" />
 				</div>
 			</div>
 		</div>
