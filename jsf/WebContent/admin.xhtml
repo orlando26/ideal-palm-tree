@@ -28,8 +28,14 @@
 			<label>Nombre</label>
 			<h:inputText value="#{reg.name}"></h:inputText>
 			
+			<label>Matricula</label>
+			<h:inputText value="#{reg.username}"></h:inputText>
+			
 			<label>Contrasena</label>
-			<h:inputText value="#{reg.password}"></h:inputText>
+			<h:inputSecret value="#{reg.password}"></h:inputSecret>
+			
+			<label>Confirmar contrasena</label>
+			<h:inputSecret value="#{reg.confirmPasword}"></h:inputSecret>
 			
 			<label>Email</label>
 			<h:inputText value="#{reg.email}"></h:inputText>
@@ -50,7 +56,7 @@
 			<h:inputText value="#{reg.profile}"></h:inputText>
 
 		</h:panelGrid>
-		<p:commandButton value="Registrar" actionListener="#{reg.register}"></p:commandButton>
+		<p:commandButton value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
 	</h:form>
 
 </h:body>

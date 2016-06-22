@@ -49,21 +49,20 @@ public class Register extends Form{
 			user.setBoss(boss);
 			user.setProfile(profile);
 			user.setStatus(status);
+			user.setUsername(username);
+			HibernateSession.saveObject(user);
 			
-			if(!UserModel.findByUserName(user.getName()).isEmpty()){
+			/*if(!UserModel.findByUserName(user.getName()).isEmpty()){
 				context.addMessage(null, new FacesMessage("Error",  "El usuario " + user.getName() + " ya existe"));
 			}else{
 				context.addMessage(null, new FacesMessage("Registro exitoso",  "El usuario " + user.getName() + " se registro exitosamente"));
 				HibernateSession.saveObject(user);
 				redirect("/index.xhtml");
-			}
+			}*/
 		}else{
 			context.addMessage(null, new FacesMessage("Error",  "Las contrase�as no coinciden "));
 		}
-	}
-	
-	public void print(){
-		System.out.println("sdsadas");
+			
 	}
 	
 	/*

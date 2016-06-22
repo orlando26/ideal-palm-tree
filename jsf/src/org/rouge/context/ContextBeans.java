@@ -7,6 +7,7 @@ import javax.faces.bean.SessionScoped;
 
 import org.rouge.bean.Auth;
 import org.rouge.bean.Register;
+import org.rouge.db.User;
 
 @ManagedBean
 @SessionScoped
@@ -20,6 +21,8 @@ public class ContextBeans implements Serializable{
 	private Auth authentication;
 	
 	private Register register;
+	
+	private static User userlogged;
 
 	/**
 	 * @return the authentication
@@ -53,6 +56,20 @@ public class ContextBeans implements Serializable{
 	 */
 	public void setRegister(Register register) {
 		this.register = register;
+	}
+
+	/**
+	 * @return the userlogged
+	 */
+	public User getUserlogged() {
+		return userlogged;
+	}
+
+	/**
+	 * @param userlogged the userlogged to set
+	 */
+	public static void setUserlogged(User user) {
+		userlogged = user;
 	}
 
 	

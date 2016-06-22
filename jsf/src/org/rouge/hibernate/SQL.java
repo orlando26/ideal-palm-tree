@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.net.URL;
 
 public class SQL {
-	public static String sqlFolder = "/org/losdeveloperos/roomies/sqlFiles/";
+	public static String sqlFolder = "/org/rouge/sqlFiles/";
 	
 	public static String getQuery(String sqlFile, String queryName){
 		String line = null;

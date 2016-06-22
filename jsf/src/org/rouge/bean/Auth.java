@@ -1,7 +1,8 @@
 package org.rouge.bean;
 
+import org.rouge.context.ContextBeans;
 import org.rouge.db.User;
-import org.rouge.hibernate.HibernateSession;
+import org.rouge.model.UserModel;
 
 public class Auth extends Form{
 
@@ -13,6 +14,19 @@ public class Auth extends Form{
 	private String userName;
 	
 	private String password;
+	
+	public void print(){
+		System.out.println(userName);
+		User user = UserModel.findByUserName(userName);
+		
+		if (user.getPassword().equals(Integer.toHexString(password.hashCode()))){
+			ContextBeans.setUserlogged(user);
+			redirect("/home.xhtml");
+		}else{
+			System.out.println("Contrasena incorrecta");
+		}
+		System.out.println("Encontro al usuario " + user.getName());
+	}
 
 	/**
 	 * @return the userName
