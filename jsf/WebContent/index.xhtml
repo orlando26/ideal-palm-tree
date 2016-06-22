@@ -11,7 +11,7 @@
 
 <f:view renderKitId="PRIMEFACES_MOBILE" />
 <h:head>
-	<title>Rouge</title>
+	<title>Rouge - Inicio de sesion</title>
 	<h:outputStylesheet library="css" name="styles.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="jquery.js" />
@@ -28,57 +28,57 @@
 								<table class="center">
 									<tr>
 										<td>
-											<button class="boton_numero">1</button>
+											<p:commandButton styleClass="boton_numero" value="1" />
 										</td>
 										<td width="30vw"></td>
 										<td>
-											<button class="boton_numero">2</button>
+											<p:commandButton styleClass="boton_numero" value="2"/>
 										</td>
 										<td width="30vw"></td>
 										<td>
-											<button class="boton_numero">3</button>
+											<p:commandButton styleClass="boton_numero" value="3"/>
 										</td>
 									</tr>
 									<tr height="15vh"></tr>
 									<tr>
 										<td>
-											<button class="boton_numero">4</button>
+											<p:commandButton styleClass="boton_numero" value="4"/>
 										</td>
 										<td></td>
 										<td>
-											<button class="boton_numero">5</button>
+											<p:commandButton styleClass="boton_numero" value="5"/>
 										</td>
 										<td></td>
 										<td>
-											<button class="boton_numero">6</button>
+											<p:commandButton styleClass="boton_numero" value="6"/>
 										</td>
 									</tr>
 									<tr height="15vh"></tr>
 									<tr>
 										<td>
-											<button class="boton_numero">7</button>
+											<p:commandButton styleClass="boton_numero" value="7"/>
 										</td>
 										<td></td>
 										<td>
-											<button class="boton_numero">8</button>
+											<p:commandButton styleClass="boton_numero" value="8"/>
 										</td>
 										<td></td>
 										<td>
-											<button class="boton_numero">9</button>
+											<p:commandButton styleClass="boton_numero" value="9"/>
 										</td>
 									</tr>
 									<tr height="15vh"></tr>
 									<tr>
 										<td>
-											<button class="boton_numero">#</button>
+											<p:commandButton styleClass="boton_numero" value="#"/>
 										</td>
 										<td></td>
 										<td>
-											<button class="boton_numero">0</button>
+											<p:commandButton styleClass="boton_numero" value="0"/>
 										</td>
 										<td></td>
 										<td>
-											<button class="boton_numero">*</button>
+											<p:commandButton styleClass="boton_numero" value="*"/>
 										</td>
 									</tr>
 								</table>
@@ -108,7 +108,9 @@
 					<tr>
 						<td>
 							<div style="margin: 0 5vw 0 5vw; text-align: center">
-								<button class="boton_borrar" id="boton_borrar">BORRAR</button>
+								<p:commandButton styleClass="boton_borrar" id="boton_borrar" value="Borrar">
+									<f:ajax render="@none"/>
+								</p:commandButton>
 							</div>
 						</td>
 						<td>
