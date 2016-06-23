@@ -219,8 +219,17 @@ table.sinmargenes {
     box-shadow: none !important;
 }
 .MapHeader {
-	height: 10vh;
+	height: 8vh;
 	background: #3366FF;
+	padding-top: 3vh;
+}
+@media screen and (max-height:550px) {
+	
+	.MapHeader {
+		height: 40px;
+		padding-top: 0;
+	}
+	
 }
 .HeaderLabel {
 	color: #FFFFFF;
