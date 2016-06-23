@@ -218,3 +218,11 @@ table.sinmargenes {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
+.MapHeader {
+	height: 10vh;
+	background: #3366FF;
+}
+.HeaderLabel {
+	color: #FFFFFF;
+	margin-left: 12vw;
+}
