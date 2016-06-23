@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+	
+  <h:head>
+  	<title>Rouge - Ruta</title>
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
+	<h:outputScript library="js" name="jquery.js" />
+	<h:outputScript library="js" name="googlemaps.js" />
+	<style>
+		 html, body {
+		 	height: 100%;
+		 	margin: 0;
+		 	padding: 0;
+		 }
+		 #map {
+		 	height: 90vh;
+		 }
+	</style>
+  </h:head>
+  <h:body>
+  	<div id="header" class="MapHeader">
+  		<h:outputText styleClass="HeaderLabel" id="destination" value="Destino" />
+  		<h:outputText styleClass="HeaderLabel" id="distance" value="3 Km" />
+  		<h:outputText styleClass="HeaderLabel" id="time" value="1 min"/>
+  	</div>
+    <div id="map"></div>
+    <script async="" defer=""
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
+    </script>
+  </h:body>
+</html>
