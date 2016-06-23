@@ -1,12 +1,17 @@
 *{
-	font-family: 'Open Sans', sans-serif; !important;
+	font-family: 'Open Sans', sans-serif !important;
 	font-size: 25px !important;
 }
-*:focus {
-    outline: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+.ui-focus {
+ -moz-box-shadow: none !important;
+ -webkit-box-shadow: none !important;
+ box-shadow: none !important;
+ opacity: 1 !important;
+ background: white !important;
+}
+.ui-corner-all {
+   -webkit-border-radius:.0 !important;
+   border-radius: 0 !important;
 }
 .pag {
 	width: 100vw !important;
@@ -28,11 +33,12 @@
 	padding:0 !important;	
 }
 .t4 {
+	color: #ed5351;
 	font-size: 40px !important;
 	margin: 2vh !important;
 	padding:0 !important;
 }
-input.textbox {
+.textbox {
 	margin: 0 !important;
 	height: 11.5vh !important;
 	padding: 0 !important;
@@ -42,33 +48,32 @@ input.textbox {
 	text-shadow:none !important;
 	border: 0px !important;
 	min-height: 0 !important;
-	-webkit-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
-	box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow:inset 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
 }
 .boton{
     text-align:center !important;
     margin : 0px auto !important;
 }
 .boton_aceptar {
-	/*margin: 8vh 0;*/
 	background:#7BB241 !important;
 	color:#FBFAFA !important;
 	height: 11.5vh !important;
 
 	padding: 0 !important;
 	font-size: 30px !important;
-	font-weight: normal;
+	font-weight: normal !important;
 	border-radius:0px !important;
 	text-shadow:none !important;
 	border: 0px !important;
-	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
-	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
 .boton_aceptar:active{
 	opacity: 0.8;
-    filter: alpha(opacity=80);
+    filter: alpha(opacity=80) !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -79,12 +84,11 @@ input.textbox {
 	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.25) !important;
 }
 .sombra {
-	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
 }
 .boton_borrar {
-	/*margin: 8vh 0;*/
 	background: #ED5351 !important;
 	color:#FBFAFA !important;
 	height: 11.5vh !important;
@@ -95,13 +99,13 @@ input.textbox {
 	border-radius:0px !important;
 	text-shadow:none !important;
 	border: 0px !important;
-	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
 }
 .boton_borrar:active{
 	opacity: 0.8;
-    filter: alpha(opacity=80);
+    filter: alpha(opacity=80) !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -114,7 +118,7 @@ input.textbox {
 .datos {
 	margin: 0 !important;
 	padding: 0 !important;
-	background: #EDEDED;
+	background: #EDEDED !important;
 	border: 0 !important;
 	text-align: center !important;
 	max-height: 100% !important;
@@ -139,24 +143,24 @@ input.textbox {
 }
 .boton_numero {
 	margin: 0 !important;
-	text-align: center;
-	background:#FBFAFA;
-	color:#414142;
+	text-align: center !important;
+	background:#FBFAFA !important;
+	color:#414142 !important;
 	height: 13vh !important;
 	width: 11vw !important;
 	padding: 0 !important;
 	font-size: 30px !important;
-	font-weight: normal;
+	font-weight: normal !important;
 	border-radius:0px !important;
 	text-shadow:none !important;
 	border: 0px !important;
-	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
-	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
-	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19);
+	-webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.19) !important;
 }
 .boton_numero:active{
-	opacity: 0.8;
-    filter: alpha(opacity=80);
+	opacity: 0.8 !important;
+    filter: alpha(opacity=80) !important;
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -187,7 +191,7 @@ table {
     border-spacing: initial;  
 }
 table.sinmargenes {
-	border-spacing: 0;
+	border-spacing: 0 !important;
 }
 .userimage {
 	border-radius: 50% !important;
@@ -196,7 +200,7 @@ table.sinmargenes {
 }
 .mapbut{
 	width: 20vw !important;
-	height: auto;
+	height: auto !important;
 	-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -207,8 +211,8 @@ table.sinmargenes {
     box-shadow: none !important;
 }
 .mapbut:active {
-	opacity: 0.8;
-    filter: alpha(opacity=80);
+	opacity: 0.8 !important;
+    filter: alpha(opacity=80) !important;
 	-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;

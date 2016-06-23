@@ -1,15 +1,19 @@
 #clock {
 	margin: auto;
-	background-image: url("http://demo.web3designs.com/images/clockBg.png");
-	height: 200px;
+	background-image: url("../resources/images/clockBg.png");
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	height: 22.7vw;
 	position: relative;
-	width: 200px;
-	margin-top:10vh;
-	margin-bottom: 20vh;
+	width: 20vw;
+	margin-top:0;
+	margin-bottom: 10vh;
+	padding: 0;
+	
 }
 #clock div {
 	position: absolute;
-	left:50%
+	left:48%
 }
 #clock img[src*="second"] {
 	transition: transform 600000s linear 0s;
