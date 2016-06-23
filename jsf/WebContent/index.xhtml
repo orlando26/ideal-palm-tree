@@ -84,13 +84,13 @@
 								</table>
 							</div>
 						</td>
-						<td style="width: 50%"><div style="margin: 0 5vw 0 5vw;">
+						<td style="width: 50%"><div style="margin: 0 5vw 0 5vw;text-align:center">
 								<c:set var="auth" value="#{ContextBeans.authentication}" />
 								<div style="position: relative; top: -3vh">
 									<label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
 								</div>
 								<div>
-									<h:inputText class="textbox" value="#{auth.userName}" id="username" />
+									<h:inputText class="textbox" data-corners="false" value="#{auth.userName}" id="username" />
 								</div>
 								<div style="position: relative; top: 7vh">
 									<label class="t1" for="password" style="margin: 6vh 0;">CONTRASE&#209;A</label>
