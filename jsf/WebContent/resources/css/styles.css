@@ -199,6 +199,7 @@ table.sinmargenes {
 	height: auto;
 }
 .mapbut{
+	margin: 0 0 0 1.7vw !important;
 	width: 20vw !important;
 	height: auto !important;
 	-moz-box-shadow: none !important;
@@ -222,7 +223,14 @@ table.sinmargenes {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
-.MapHeader {
+#checkin {
+	margin: 0 0 0 1.7vw !important;
+	width: 20vw !important;
+	height: auto !important;
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}.MapHeader {
 	height: 8vh;
 	background: #3366FF;
 	padding-top: 3vh;
