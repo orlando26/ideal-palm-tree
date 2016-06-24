@@ -224,13 +224,33 @@ table.sinmargenes {
     box-shadow: none !important;
 }
 #checkin {
-	margin: 0 0 0 1.7vw !important;
-	width: 20vw !important;
+	position: absolute !important;
+	left: 70vw !important;
+	top: 68vh !important;
+	width: 15vw !important;
 	height: auto !important;
 	-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-}.MapHeader {
+}
+#checkin:focus {
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+#checkin:active {
+	opacity: 0.8 !important;
+    filter: alpha(opacity=80) !impo rtant;
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+#checkin:hover {
+		-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.MapHeader {
 	height: 8vh;
 	background: #3366FF;
 	padding-top: 3vh;
