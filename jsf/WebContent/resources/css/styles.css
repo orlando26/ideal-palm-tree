@@ -199,6 +199,7 @@ table.sinmargenes {
 	height: auto;
 }
 .mapbut{
+	margin: 0 0 0 1.7vw !important;
 	width: 20vw !important;
 	height: auto !important;
 	-moz-box-shadow: none !important;
@@ -221,4 +222,28 @@ table.sinmargenes {
 		-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
+}
+#checkin {
+	margin: 0 0 0 1.7vw !important;
+	width: 20vw !important;
+	height: auto !important;
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}.MapHeader {
+	height: 8vh;
+	background: #3366FF;
+	padding-top: 3vh;
+}
+@media screen and (max-height:550px) {
+	
+	.MapHeader {
+		height: 40px;
+		padding-top: 0;
+	}
+	
+}
+.HeaderLabel {
+	color: #FFFFFF;
+	margin-left: 12vw;
 }
