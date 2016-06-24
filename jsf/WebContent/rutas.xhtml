@@ -21,7 +21,7 @@
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
-<c:set var="reg" value="#{ContextBeans.register}" />
+<c:set var="reg" value="#{ContextBeans.rider}" />
 <body>
 <h:panelGrid columns="2">
 			<label>Administrador</label>
@@ -32,8 +32,10 @@
 			
 			<label>Coordenadas de origen</label>
 			<h:inputText value ="#{reg.rde_origin}"></h:inputText>
+			
+			<label>Status</label>
+			<h:inputText value ="#{reg.status}"></h:inputText>
 </h:panelGrid>
-<button>boton</button>
-		<p:commandButton value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
+		<p:commandButton styleClass="boton_numero2" value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
 </body>
 </html>

@@ -8,6 +8,7 @@ import javax.faces.bean.SessionScoped;
 import org.rouge.bean.Auth;
 import org.rouge.bean.Querys;
 import org.rouge.bean.Register;
+import org.rouge.bean.RideR;
 import org.rouge.db.User;
 
 @ManagedBean
@@ -26,6 +27,8 @@ public class ContextBeans implements Serializable{
 	private Querys querys;
 	
 	private static User userlogged;
+	
+	private RideR rider;
 
 	/**
 	 * @return the authentication
@@ -85,6 +88,14 @@ public class ContextBeans implements Serializable{
 
 	public void setQuerys(Querys querys) {
 		this.querys = querys;
+	}
+
+	public RideR getRider() {
+		return rider;
+	}
+
+	public void setRider(RideR rider) {
+		this.rider = rider;
 	}
 
 	
