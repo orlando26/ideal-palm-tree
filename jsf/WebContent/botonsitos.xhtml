@@ -12,6 +12,17 @@
 <f:view renderKitId="PRIMEFACES_MOBILE" />
 <h:head>
 	<title>Acceso</title>
+	<style>
+		 html, body {
+		 	height: 100%;
+		 	margin: 0;
+		 	padding: 0;
+		 }
+		 #map {
+		 	height: 100vh; width: 50vw;
+		 }
+	</style>
+	<h:outputScript library="js" name="googlemaps.js" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 </h:head>
 <f:facet name="postinit">
@@ -20,6 +31,7 @@
 	<h:outputStylesheet library="css" name="styles.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="scripts.js" />
+	
 </f:facet>
 <h:body>
 		<h:form id="login-form">
@@ -27,23 +39,23 @@
 			<div role="main" class="ui-content, pag">
 			
 		<div class="ui-grid-a">
-			<div class="ui-block-a"></div>
+			<div class="ui-block-a"  id="map"></div>
 			<div class="ui-block-b">
 
 	<p:commandButton onclick=" location.href='http://localhost:8080/Rouge/admin.xhtml'"
-	data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;" 
-	styleClass="boton_numero2" value="Registrar" />
-	
-	<p:commandButton data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;" styleClass="boton_numero2" value="Eliminar " />
-	<p:commandButton data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;" styleClass="boton_numero2" value="Modificar" />	
-	<p:commandButton data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;" styleClass="boton_numero2" value="Consultar" />
-	<p:commandButton data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;" styleClass="boton_numero2" value="Asignar ruta" />
+	data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ; margin-left:5vw !important;"
+	styleClass="boton_numero2" value="Registrar" />	
+	<p:commandButton data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;margin-left:5vw !important;" styleClass="boton_numero2" value="Consultar" />
+	<p:commandButton data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;margin-left:5vw !important;" styleClass="boton_numero2" value="Asignar ruta" />
 </div>
 		</div><!-- /grid-a -->
 
 	</div>
 	</div>
 	</h:form>
+	<script async="" defer=""
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
+    </script>
 
 </h:body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+<h:head>
+	<title>Rouge</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</h:head>
+<f:facet name="postinit">
+	<link rel="stylesheet"
+		href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
+	<h:outputScript library="js" name="scripts.js" />
+</f:facet>
+<c:set var="reg" value="#{ContextBeans.rider}" />
+<body>
+<h:panelGrid columns="2">
+			<label>Administrador</label>
+			<h:inputText value="#{reg.rde_admin_id}"></h:inputText>
+			
+			<label>Conductor</label>
+			<h:inputText value="#{reg.rde_driver_id}"></h:inputText>
+			
+			<label>Coordenadas de origen</label>
+			<h:inputText value ="#{reg.rde_origin}"></h:inputText>
+			
+			<label>Status</label>
+			<h:inputText value ="#{reg.status}"></h:inputText>
+</h:panelGrid>
+		<p:commandButton styleClass="boton_numero2" value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
+</body>
+</html>

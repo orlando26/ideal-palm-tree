@@ -30,4 +30,15 @@ public class UserModel {
 		session.close();
 		return list.get(0);
 	}
+	
+	public static List<User> findAll(){
+		Session session = HibernateSession.getSession();
+		session.beginTransaction();
+		String sql = SQL.getQuery("User", "findAll");
+		Query query = session.createQuery(sql);
+		List<User> list = query.list();
+		session.close();
+		return list;
+		
+	}
 }
