@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import org.rouge.bean.Auth;
+import org.rouge.bean.Querys;
 import org.rouge.bean.Register;
 import org.rouge.db.User;
 
@@ -21,6 +22,8 @@ public class ContextBeans implements Serializable{
 	private Auth authentication;
 	
 	private Register register;
+	
+	private Querys querys;
 	
 	private static User userlogged;
 
@@ -70,6 +73,18 @@ public class ContextBeans implements Serializable{
 	 */
 	public static void setUserlogged(User user) {
 		userlogged = user;
+	}
+
+	public Querys getQuerys() {
+		if(querys == null)
+		{
+			querys = new Querys();
+		}
+		return querys;
+	}
+
+	public void setQuerys(Querys querys) {
+		this.querys = querys;
 	}
 
 	
