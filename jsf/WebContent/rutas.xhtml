@@ -22,7 +22,8 @@
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
 <c:set var="reg" value="#{ContextBeans.rider}" />
-<body>
+<h:body>
+<h:form>
 <h:panelGrid columns="2">
 			<label>Administrador</label>
 			<h:inputText value="#{reg.rde_admin_id}"></h:inputText>
@@ -36,6 +37,7 @@
 			<label>Status</label>
 			<h:inputText value ="#{reg.status}"></h:inputText>
 </h:panelGrid>
-		<p:commandButton styleClass="boton_numero2" value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
-</body>
+		<p:commandButton styleClass="boton_numero2" value="Registrar" actionListener="#{reg.registerRide}"></p:commandButton>
+</h:form>
+</h:body>
 </html>
