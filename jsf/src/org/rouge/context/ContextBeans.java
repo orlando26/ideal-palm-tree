@@ -91,6 +91,11 @@ public class ContextBeans implements Serializable{
 	}
 
 	public RideR getRider() {
+		
+		if(rider == null)
+		{
+			rider = new RideR();
+		}
 		return rider;
 	}
 
