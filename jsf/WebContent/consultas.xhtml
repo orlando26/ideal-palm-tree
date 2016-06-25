@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+
+<f:view renderKitId="PRIMEFACES_MOBILE" />
+<h:head>
+	<title>Rouge</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</h:head>
+<f:facet name="postinit">
+	<link rel="stylesheet"
+		href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
+	<h:outputScript library="js" name="scripts.js" />
+</f:facet>
+<c:set var="querys" value="#{ContextBeans.querys}" />
+<body>
+<h:form>
+ <h:dataTable value="#{querys.users}" var="user">
+      <h:column>
+         <f:facet name="header">
+            <h:outputText value="Nombre"></h:outputText>
+         </f:facet>
+         <h:outputText value="#{user.name}"></h:outputText>
+      </h:column>
+      <h:column>
+         <f:facet name="header">
+            <h:outputText value="Matricula"></h:outputText>
+         </f:facet>
+         <h:outputText value="#{user.username}"></h:outputText>
+      </h:column>
+   </h:dataTable>
+</h:form>
+
+
+</body>
+</html>

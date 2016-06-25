@@ -6,8 +6,10 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import org.rouge.bean.Auth;
+import org.rouge.bean.Querys;
 import org.rouge.bean.Register;
 import org.rouge.bean.RideListener;
+import org.rouge.bean.RideR;
 import org.rouge.db.User;
 
 @ManagedBean
@@ -25,7 +27,11 @@ public class ContextBeans implements Serializable{
 	
 	private Register register;
 	
+	private Querys querys;
+	
 	private static User userlogged;
+	
+	private RideR rider;
 
 	/**
 	 * @return the authentication
@@ -90,6 +96,31 @@ public class ContextBeans implements Serializable{
 	 */
 	public static void setUserlogged(User user) {
 		userlogged = user;
+	}
+
+	public Querys getQuerys() {
+		if(querys == null)
+		{
+			querys = new Querys();
+		}
+		return querys;
+	}
+
+	public void setQuerys(Querys querys) {
+		this.querys = querys;
+	}
+
+	public RideR getRider() {
+		
+		if(rider == null)
+		{
+			rider = new RideR();
+		}
+		return rider;
+	}
+
+	public void setRider(RideR rider) {
+		this.rider = rider;
 	}
 
 	

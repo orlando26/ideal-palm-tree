@@ -35,6 +35,8 @@ public class Register extends Form{
 	private Integer profile;
 	
 	
+	
+	
 	public void registerUser(){ 
 		FacesContext context = FacesContext.getCurrentInstance();
 		if(password.equals(confirmPasword)){
