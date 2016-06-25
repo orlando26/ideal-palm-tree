@@ -7,6 +7,7 @@ import javax.faces.bean.SessionScoped;
 
 import org.rouge.bean.Auth;
 import org.rouge.bean.Register;
+import org.rouge.bean.RideListener;
 import org.rouge.db.User;
 
 @ManagedBean
@@ -19,6 +20,8 @@ public class ContextBeans implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	private Auth authentication;
+	
+	private RideListener rideListener;
 	
 	private Register register;
 	
@@ -39,6 +42,23 @@ public class ContextBeans implements Serializable{
 	 */
 	public void setAuthentication(Auth authentication) {
 		this.authentication = authentication;
+	}
+	
+	/**
+	 * @return the rideListener bean
+	 */
+	public RideListener getRideListener() {
+		if (rideListener == null)
+			rideListener = new RideListener();
+		return rideListener;
+	}
+	
+	/**
+	 * @param rideListener
+	 * 			the rideListener bean to set
+	 */
+	public void setRideListener(RideListener rideListener) {
+		this.rideListener = rideListener;
 	}
 
 	/**

@@ -9,6 +9,7 @@ import org.rouge.hibernate.HibernateSession;
 import org.rouge.hibernate.SQL;
 
 public class UserModel {
+	@SuppressWarnings("unchecked")
 	public static User findByUserName(String userName){
 		Session session = HibernateSession.getSession();
 		session.beginTransaction();
@@ -20,6 +21,7 @@ public class UserModel {
 		return list.get(0);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static User findByPrimaryKey(Long id){
 		Session session = HibernateSession.getSession();
 		session.beginTransaction();
