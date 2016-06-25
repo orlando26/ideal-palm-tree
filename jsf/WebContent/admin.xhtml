@@ -23,7 +23,7 @@
 </f:facet>
 <c:set var="reg" value="#{ContextBeans.register}" />
 <h:body>
-	<h:form>
+	<h:form enctype="multipart/form-data">
 		<h:panelGrid columns="2">
 			<label>Nombre</label>
 			<h:inputText value="#{reg.name}"></h:inputText>
@@ -56,7 +56,8 @@
 			<h:inputText value="#{reg.profile}"></h:inputText>
 
 		</h:panelGrid>
-		<button>boton</button>
+		<p:fileUpload value="#{reg.image}" mode="simple" skinSimple="true"></p:fileUpload>
+		<p:commandButton value="Guardar imagen" ajax="false" actionListener="#{reg.saveImage}"></p:commandButton>
 		<p:commandButton value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
 	</h:form>
 
