@@ -62,7 +62,19 @@ public class Register extends Form{
 			user.setUsername(username);
 			HibernateSession.saveObject(user);
 			
-			
+			if(image != null){
+				System.out.println("grabando imagen...");
+				try {
+					save(image);
+					System.out.println("Se grabo la imagen correctamente");
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					System.out.println("No se pudo grabar la imagen");
+				}
+			}else{
+				System.out.println("no se encontro la imagen");
+			}
 			
 			/*if(!UserModel.findByUserName(user.getName()).isEmpty()){
 				context.addMessage(null, new FacesMessage("Error",  "El usuario " + user.getName() + " ya existe"));
@@ -77,29 +89,11 @@ public class Register extends Form{
 			
 	}
 	
-	public void saveImage(){
-		if(image != null){
-			System.out.println("grabando imagen...");
-			try {
-				save(image);
-				System.out.println("Se grabo la imagen correctamente");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				System.out.println("No se pudo grabar la imagen");
-			}
-		}else{
-			System.out.println("no se encontro la imagen");
-		}
-		
-	}
-	
 	public void save(UploadedFile image) throws IOException {
-		System.out.println("La imagen se llama " + image.getFileName());
 	    InputStream input = image.getInputstream();
-	    String filename = image.getFileName();
-	    OutputStream output = new FileOutputStream(new File("/resources/images", filename));
-
+	    String filename = username + ".png";
+	    OutputStream output = new FileOutputStream(new File("/home/orlando/Documents/Servers/Rouge-tomcat8/webapps/Rouge/resources/images", filename));
+	    
 	    try {
 	        IOUtils.copy(input, output);
 	    } finally {

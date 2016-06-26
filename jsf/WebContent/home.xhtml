@@ -19,14 +19,14 @@
 	<h:outputScript library="js" name="clock.js" />
 	<h:outputScript library="js" name="scripts.js" />
 </h:head>
-
+<c:set var="auth" value="#{ContextBeans.authentication}" />
 <h:body>
 	<div class="ui-grid-b">
 		<div class="ui-block-a" style="width: 40%">
 			<div class="datos ui-bar ui-bar-a" style="height: 100vh">
 				<div style="margin: 5vh 0 0 0">
 					<h:graphicImage class="userimage"
-						value="resources/images/userSquare.png" />
+						value="resources/images/#{ContextBeans.userlogged.username}.png" />
 					<label class="t2">#{ContextBeans.userlogged.name}</label> <label class="t3">Compa&#241;&#237;a</label>
 					<label class="t3">#{ContextBeans.userlogged.username}</label> <label class="t4">#7</label>
 				</div>
