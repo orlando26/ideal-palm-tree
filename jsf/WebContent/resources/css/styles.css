@@ -263,6 +263,7 @@ table.sinmargenes {
 	-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
+<<<<<<< HEAD
 }
 #checkin:focus {
 	-moz-box-shadow: none !important;
@@ -283,8 +284,12 @@ table.sinmargenes {
 }
 .MapHeader {
 	height: 8vh;
+=======
+}.MapHeader {
+	height: 6.6vh;
+>>>>>>> develop
 	background: #3366FF;
-	padding-top: 3vh;
+	padding-top: 1.4vh;
 }
 @media screen and (max-height:550px) {
 	
