@@ -22,6 +22,12 @@
 <body>
 <h:form>
  <h:dataTable value="#{querys.users}" var="user">
+ <h:column>
+         <f:facet name="header">
+            <h:outputText value="ID"></h:outputText>
+         </f:facet>
+         <h:outputText value="#{user.id}"></h:outputText>
+      </h:column>
       <h:column>
          <f:facet name="header">
             <h:outputText value="Nombre"></h:outputText>
@@ -33,6 +39,19 @@
             <h:outputText value="Matricula"></h:outputText>
          </f:facet>
          <h:outputText value="#{user.username}"></h:outputText>
+      </h:column>
+      
+      <h:column>
+         <f:facet name="header">
+            <h:outputText value="    "></h:outputText>
+         </f:facet>
+         <h:commandLink value= "Editar"></h:commandLink>
+      </h:column>
+      <h:column>
+         <f:facet name="header">
+            <h:outputText value="    "></h:outputText>
+         </f:facet>
+         <h:commandLink value= "Eliminar" action = "#{querys.deleteUsers}"></h:commandLink>
       </h:column>
    </h:dataTable>
 </h:form>

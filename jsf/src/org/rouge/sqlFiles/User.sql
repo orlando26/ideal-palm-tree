@@ -9,3 +9,7 @@ FROM org.rouge.db.User where usr_id = :id
 findAll{
 FROM org.rouge.db.User 
 }
+
+deleteById{
+delete FROM org.rouge.db.User where usr_id = :id
+}
