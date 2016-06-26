@@ -13,18 +13,19 @@
 <h:head>
 	<title>Rouge - Inicio de sesion</title>
 	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="animate.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="jquery.js" />
 	<h:outputScript library="js" name="scripts.js" />
 </h:head>
-<h:body>
-	<h:form id="login-form">
+<h:body class="animated fadeInUp">
+	<h:form id="login-form" >
 		<div data-role="page">
 			<div role="main" class="ui-content, pag">
-				<table class="sinmargenes, pag">
+				<table class="pag">
 					<tr>
 						<td style="width: 50%">
-							<div style="margin: 0 5vw 0 5vw; text-align: center">
+							<div style="margin: 7vh 5vw 0 5vw; text-align: center">
 								<table class="center">
 									<tr>
 										<td>
@@ -84,7 +85,7 @@
 								</table>
 							</div>
 						</td>
-						<td style="width: 50%"><div style="margin: 0 5vw 0 5vw;text-align:center">
+						<td style="width: 50%"><div style="margin: 7vh 5vw 0 5vw;text-align:center">
 								<c:set var="auth" value="#{ContextBeans.authentication}" />
 								<div style="position: relative; top: -3vh">
 									<label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>
