@@ -18,17 +18,18 @@
 	<h:outputScript library="js" name="jquery.js" />
 	<h:outputScript library="js" name="clock.js" />
 	<h:outputScript library="js" name="scripts.js" />
+	<c:set var="rideListener" value="#{ContextBeans.rideListener}" />
 </h:head>
 
-<h:body>
+<h:body onunload="stopInterval()">
 	<div class="ui-grid-b">
 		<div class="ui-block-a" style="width: 40%">
 			<div class="datos ui-bar ui-bar-a" style="height: 100vh">
 				<div style="margin: 5vh 0 0 0">
 					<h:graphicImage class="userimage"
 						value="resources/images/userSquare.png" />
-					<label class="t2">#{ContextBeans.userlogged.name}</label> <label class="t3">Compa&#241;&#237;a</label>
-					<label class="t3">#{ContextBeans.userlogged.username}</label> <label class="t4">#7</label>
+					<label id="full_name" class="t2">#{ContextBeans.userlogged.name}</label> <label class="t3">Compa&#241;&#237;a</label>
+					<label id="username" class="t3">#{ContextBeans.userlogged.username}</label> <label class="t4">#7</label>
 				</div>
 			</div>
 		</div>
@@ -57,6 +58,16 @@
 			<div class="sidebar ui-bar ui-bar-a" style="height: 100vh"></div>
 		</div>
 	</div>
+	<h:form id="rideForm">
+		<p:commandButton id="ride_listener_btn" style="display: none;" action="#{rideListener.lookForNewRide}"/>
+	</h:form>
+	<script type="text/javascript">
+		$(function(){
+			$(document).ready(function() {
+				startInterval();
+			});
+		});
+	</script>
 	<!-- /grid-b -->
 </h:body>
 </html>
