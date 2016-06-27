@@ -256,7 +256,7 @@ table.sinmargenes {
 }
 #checkin {
 	position: absolute !important;
-	left: 70vw !important;
+	left: 79vw !important;
 	top: 68vh !important;
 	width: 15vw !important;
 	height: auto !important;
@@ -283,11 +283,7 @@ table.sinmargenes {
     box-shadow: none !important;
 }
 .MapHeader {
-	height: 8vh;
-=======
-}.MapHeader {
 	height: 6.6vh;
->>>>>>> develop
 	background: #3366FF;
 	padding-top: 1.4vh;
 }
