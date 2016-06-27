@@ -260,9 +260,9 @@ table.sinmargenes {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }.MapHeader {
-	height: 8vh;
+	height: 6.6vh;
 	background: #3366FF;
-	padding-top: 3vh;
+	padding-top: 1.4vh;
 }
 @media screen and (max-height:550px) {
 	

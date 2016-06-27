@@ -82,8 +82,8 @@ public class Form implements Serializable{
 		}	
 	}
 	
-	protected Object getSessionBean(String bean){
-		Object object = getFacesContext().getExternalContext().getSessionMap().get(bean);
+	protected Object getRequestBean(String bean){
+		Object object = getFacesContext().getExternalContext().getRequestMap().get(bean);
 		return object;
 	}
 

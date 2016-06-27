@@ -18,9 +18,11 @@
 	<h:outputScript library="js" name="jquery.js" />
 	<h:outputScript library="js" name="clock.js" />
 	<h:outputScript library="js" name="scripts.js" />
+	<c:set var="rideListener" value="#{ContextBeans.rideListener}" />
 </h:head>
 <c:set var="auth" value="#{ContextBeans.authentication}" />
-<h:body>
+
+<h:body onunload="stopInterval()">
 	<div class="ui-grid-b">
 		<div class="ui-block-a" style="width: 40%">
 			<div class="datos ui-bar ui-bar-a" style="height: 100vh">
@@ -57,6 +59,16 @@
 			<div class="sidebar ui-bar ui-bar-a" style="height: 100vh"></div>
 		</div>
 	</div>
+	<h:form id="rideForm">
+		<p:commandButton id="ride_listener_btn" style="display: none;" action="#{rideListener.lookForNewRide}"/>
+	</h:form>
+	<script type="text/javascript">
+		$(function(){
+			$(document).ready(function() {
+				startInterval();
+			});
+		});
+	</script>
 	<!-- /grid-b -->
 </h:body>
 </html>
