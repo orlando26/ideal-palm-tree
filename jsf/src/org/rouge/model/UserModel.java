@@ -48,6 +48,7 @@ public class UserModel {
 		String sql = SQL.getQuery("User", "deleteById");
 		Query query = session.createQuery(sql);
 		query.setParameter("id", id);
+		query.executeUpdate();
 		session.getTransaction().commit();
 		session.close();
 		
