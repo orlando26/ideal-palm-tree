@@ -299,6 +299,7 @@ table.sinmargenes {
 	margin-left: 12vw;
 }
 .botoncirculo {
+	position:absolute;
 	width: 15vw !important;
 	height: auto !important;
 	-moz-box-shadow: none !important;
@@ -312,7 +313,7 @@ table.sinmargenes {
 }
 .botoncirculo:active {
 	opacity: 0.8 !important;
-    filter: alpha(opacity=80) !impo rtant;
+    filter: alpha(opacity=80) !important;
 	-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -322,3 +323,19 @@ table.sinmargenes {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
 } 
+.circulo {
+	position:absolute;
+	opacity:0.5;
+	width: 0vw ;
+	height: auto ;
+
+}
+.barraderecha {
+	background: white !important;
+	height: 100vh !important;
+	width: 40vw !important;
+	float: rigth !important;
+	-webkit-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+}

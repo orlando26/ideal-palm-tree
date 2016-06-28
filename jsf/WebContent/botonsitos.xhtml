@@ -24,34 +24,41 @@
 	</style>
 	<h:outputScript library="js" name="googlemaps.js" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<h:outputScript library="js" name="scripts.js" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	
 </h:head>
 <f:facet name="postinit">
 	<link rel="stylesheet"
 		href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<h:outputStylesheet library="css" name="styles.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
-	<h:outputScript library="js" name="scripts.js" />
-
-	
 </f:facet>
 <h:body>
 		<h:form id="login-form">
-		<div data-role="page">
+		<!-- Mapa -->
+		
+		<!-- Pagina 1: botones -->
+		<div data-role="page" id="pageone">
 			<div role="main" class="ui-content, pag">
-			<div style="width:100vw; height:100vh" id="map"></div>
-			<h:graphicImage class="botoncirculo" style="position: absolute !important;left: 79vw !important;top: 68vh !important;"  value="resources/images/add_route.png"  />
-			<h:graphicImage class="botoncirculo" style="position: absolute !important;left: 79vw !important;top: 36vh !important;" onclick=" location.href='http://localhost:8080/Rouge/consultas.xhtml'" value="resources/images/ver_route.png"  />
-			<div><h:graphicImage class="botoncirculo" style="position: absolute !important;left: 79vw !important;top: 4vh !important;" onclick=" location.href='http://localhost:8080/Rouge/admin.xhtml'" value="resources/images/add_user.png"  /></div>
-	<!--  
-	<p:commandButton onclick=" location.href='http://localhost:8080/Rouge/consultas.xhtml'"
-	data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;
-	margin-left:5vw !important;" styleClass="boton_numero2" value="Consultar" />
-	<p:commandButton onclick=" location.href='http://localhost:8080/Rouge/rutas.xhtml'"
-	data-inline= "true" style= "margin-top:5vh !important;margin-bottom:5vh !important ;margin-left:5vw 
-	!important;" styleClass="boton_numero2" value="Asignar ruta" />-->
-</div>
-</div>
+			<div style="width:100vw; height:100vh" id="map"></div>	
+			<a href="#pagetwo">Go to Page Two</a>
+			<div style="position: absolute; left: 79vw !important;top: 68vh !important; width: 15vw !important; height: 15vw !important;"><h:graphicImage class="botoncirculo" value="resources/images/add_route.png"  />
+				<h:graphicImage class="circulo" style="left: 50% !important;top: 50% !important;" value="resources/images/circulo.png"  /></div>
+			<div style="position: absolute; left: 79vw !important;top: 36vh !important; width: 15vw !important; height: 15vw !important;"><h:graphicImage class="botoncirculo" value="resources/images/ver_route.png"  />
+				<h:graphicImage class="circulo" style="left: 50% !important;top: 50% !important;" value="resources/images/circulo.png"  /></div>
+			<div style="position: absolute; left: 79vw !important;top: 4vh !important; width: 15vw !important; height: 15vw !important;"><h:graphicImage class="botoncirculo" location.href='#pagetwo' value="resources/images/add_user.png"  />
+				<h:graphicImage class="circulo" style="left: 50% !important;top: 50% !important;" value="resources/images/circulo.png"  /></div>
+			</div>
+		</div>
+		<!-- Pagina 2: agregar usuario -->
+		<div data-role="page" id="pagetwo">
+			<div role="main" class="ui-content, pag">	
+			<div style="width:100vw; height:100vh" id="map"></div>	
+			
+			</div>
+		</div>
+
 	</h:form>
 	<script async="" defer=""
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
