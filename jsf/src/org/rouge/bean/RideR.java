@@ -15,7 +15,7 @@ public class RideR extends Form {
 	
 	private Long rde_driver_id;
 	
-	private String rde_destination;
+	private String rde_dest;
 	
 	private String rde_origin;
 	
@@ -32,14 +32,15 @@ public class RideR extends Form {
 		FacesContext context = FacesContext.getCurrentInstance();
 		
 		Ride ride = new Ride();
+		Date startDate = new Date(System.currentTimeMillis());
 		
 		ride.setAdmin(rde_admin_id);
 		ride.setDriver(rde_driver_id);
 		ride.setOrigin(null);
 		ride.setCurrent(null);
-		ride.setDestination(rde_destination);
+		ride.setDestination(rde_dest);
 		ride.setEndDate(null);
-		ride.setStartDate(null);
+		ride.setStartDate(startDate);
 		ride.setStatus(status);
 		HibernateSession.saveObject(ride);
 		
@@ -69,11 +70,11 @@ public class RideR extends Form {
 	public void setStatus(Integer status){
 		this.status = status;
 	}
-	public String getRde_destination() {
-		return rde_destination;
+	public String getRde_dest() {
+		return rde_dest;
 	}
-	public void setRde_destination(String rde_destination) {
-		this.rde_destination = rde_destination;
+	public void setRde_dest(String rde_destination) {
+		this.rde_dest = rde_destination;
 	}
 	public String getRde_current() {
 		return rde_current;

@@ -1,11 +1,15 @@
 package org.rouge.bean;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.rouge.db.User;
 import org.rouge.model.UserModel;
 
+import com.mysql.jdbc.PreparedStatement;
+
 public class Querys extends Form {
+	private Long editID ;
 
 	/**
 	 * 
@@ -22,5 +26,15 @@ public class Querys extends Form {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-
+	public void deleteUsers(Long id){
+		UserModel.deleteById(id);
+	}
+	public void receipId(Long id){
+		editID = id;
+	}
+	
+	      
 }
+
+
+

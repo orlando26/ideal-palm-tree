@@ -1,6 +1,15 @@
 var rideInterval;
 
 $(function(){
+	$('.botoncirculo').click(function(){
+		this.parent().animate({
+            left: '250px',
+            opacity: '0.5',
+            height: '150px',
+            width: '150px'
+        });
+    });
+	
     $('.boton_numero').click(function(){
         var text = $('#login-form\\:username').val();
         $('#login-form\\:username').val(text + $(this).text());

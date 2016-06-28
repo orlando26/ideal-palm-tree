@@ -1,5 +1,6 @@
 package org.rouge.db;
 
+
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -7,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name = "ride")
@@ -44,10 +47,12 @@ public class Ride {
 	
 	//Fecha de inicio (timestamp)
 	@Column(name = "rde_start_date")
-	private Long startDate;
+	@Type(type="date")
+	private Date startDate;
 	
 	//Fecha de finalizacion (timestamp)
 	@Column(name = "rde_end_date")
+	@Type(type="date")
 	private Long endDate;
 
 	
@@ -109,12 +114,12 @@ public class Ride {
 		this.status = status;
 	}
 
-	public Long getStartDate() {
+	public Date getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Long startDate) {
-		this.startDate = startDate;
+	public void setStartDate(Date startDate2) {
+		this.startDate = startDate2;
 	}
 
 	public Long getEndDate() {
