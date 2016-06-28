@@ -15,6 +15,8 @@ public class Auth extends Form{
 	
 	private String password;
 	
+	private String imageName;
+	
 	public void print(){
 		System.out.println(userName);
 		User user = UserModel.findByUserName(userName);
@@ -54,6 +56,21 @@ public class Auth extends Form{
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the imageName
+	 */
+	public String getImageName() {
+		imageName = "resources/images/" + userName + ".png";
+		return imageName;
+	}
+
+	/**
+	 * @param imageName the imageName to set
+	 */
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
 	
 	
