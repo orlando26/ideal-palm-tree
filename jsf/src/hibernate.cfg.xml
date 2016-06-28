@@ -39,11 +39,12 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
 
-        <mapping class="org.rouge.db.User" />
+
         <mapping class="org.rouge.db.Ride" />
-        <mapping class="org.rouge.db.Truck" />
-        <mapping class="org.rouge.db.RideStatus" />
-        <mapping class="org.rouge.db.UserProfile" />
-        <mapping class="org.rouge.db.UserStatus" />
+         <mapping class="org.rouge.db.User" />
+         <mapping class="org.rouge.db.Truck" />
+         <mapping class="org.rouge.db.RideStatus" />
+         <mapping class="org.rouge.db.UserProfile" />
+        <mapping class="org.rouge.db.UserStatus" /> 
     </session-factory>
 </hibernate-configuration>

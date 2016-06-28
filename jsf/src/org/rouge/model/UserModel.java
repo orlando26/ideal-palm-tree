@@ -40,7 +40,18 @@ public class UserModel {
 		Query query = session.createQuery(sql);
 		List<User> list = query.list();
 		session.close();
-		return list;
+		return list;	
+	}
+	public static void deleteById(Long id){
+		Session session = HibernateSession.getSession();
+		session.beginTransaction();
+		String sql = SQL.getQuery("User", "deleteById");
+		Query query = session.createQuery(sql);
+		query.setParameter("id", id);
+		query.executeUpdate();
+		session.getTransaction().commit();
+		session.close();
+		
 		
 	}
 }
