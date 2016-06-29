@@ -8,23 +8,25 @@
 	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:pm="http://primefaces.org/mobile">
-
 <f:view renderKitId="PRIMEFACES_MOBILE" />
 <h:head>
 	<title>Rouge - Inicio de sesion</title>
 	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="animate.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="jquery.js" />
 	<h:outputScript library="js" name="scripts.js" />
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </h:head>
-<h:body>
-	<h:form id="login-form">
+<h:body id="clip">
+	<h:form id="login-form" >
 		<div data-role="page">
 			<div role="main" class="ui-content, pag">
-				<table class="sinmargenes, pag">
+				<table class="pag">
 					<tr>
 						<td style="width: 50%">
-							<div style="margin: 0 5vw 0 5vw; text-align: center">
+							<div style="margin: 7vh 5vw 0 5vw; text-align: center">
 								<table class="center">
 									<tr>
 										<td>
@@ -84,7 +86,7 @@
 								</table>
 							</div>
 						</td>
-						<td style="width: 50%"><div style="margin: 0 5vw 0 5vw;text-align:center">
+						<td style="width: 50%"><div style="margin: 7vh 5vw 0 5vw;text-align:center">
 								<c:set var="auth" value="#{ContextBeans.authentication}" />
 								<div style="position: relative; top: -3vh">
 									<label class="t1" for="username" style="margin: 6vh 0;">USUARIO</label>

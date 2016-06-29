@@ -1,10 +1,10 @@
 package org.rouge.bean;
 
-import org.rouge.context.ContextBeans;
+import org.rouge.context.SessionBeans;
 import org.rouge.db.User;
 import org.rouge.model.UserModel;
 
-public class Auth extends Form{
+public class Auth extends Form {
 
 	/**
 	 * Authentication bean
@@ -15,12 +15,16 @@ public class Auth extends Form{
 	
 	private String password;
 	
+	private String imageName;
+	
 	public void print(){
 		System.out.println(userName);
 		User user = UserModel.findByUserName(userName);
 		
 		if (user.getPassword().equals(Integer.toHexString(password.hashCode()))){
-			ContextBeans.setUserlogged(user);
+			//SessionBeans sessionBean = (SessionBeans) getSessionBean("SessionBeans");
+			//sessionBean.setUserlogged(user);
+			SessionBeans.setUserlogged(user);
 			redirect("/home.xhtml");
 		}else{
 			System.out.println("Contrasena incorrecta");
@@ -54,6 +58,21 @@ public class Auth extends Form{
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	/**
+	 * @return the imageName
+	 */
+	public String getImageName() {
+		imageName = "resources/images/" + userName + ".png";
+		return imageName;
+	}
+
+	/**
+	 * @param imageName the imageName to set
+	 */
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
 	}
 	
 	
