@@ -17,6 +17,13 @@ public class Querys extends Form {
 	private static final long serialVersionUID = 1L;
 	
 	private List<User> users;
+	public Long getEditID() {
+		return editID;
+	}
+	public void setEditID(Long editID) {
+		this.editID = editID;
+		
+	}
 	public Querys(){
 		setUsers(UserModel.findAll());
 	}
@@ -29,8 +36,17 @@ public class Querys extends Form {
 	public void deleteUsers(Long id){
 		UserModel.deleteById(id);
 	}
-	public void receipId(Long id){
-		editID = id;
+	
+	public void update(Long id){
+		this.editID= id;
+		System.out.println("El id seleccionado es: " + editID);
+		redirect("/actualizarDatos.xhtml");
+	
+	}
+	public  Long printID(Long editID){
+		return editID;
+		
+		
 	}
 	
 	      

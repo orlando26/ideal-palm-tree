@@ -10,6 +10,7 @@ import org.rouge.bean.Querys;
 import org.rouge.bean.Register;
 import org.rouge.bean.RideListener;
 import org.rouge.bean.RideR;
+import org.rouge.bean.Updates;
 import org.rouge.db.User;
 
 @ManagedBean
@@ -33,6 +34,7 @@ public class ContextBeans implements Serializable{
 	
 	private RideR rider;
 
+	private Updates updates;
 	/**
 	 * @return the authentication
 	 */
@@ -98,6 +100,18 @@ public class ContextBeans implements Serializable{
 		userlogged = user;
 	}
 
+	public Updates getUpdates() {
+		if(updates == null)
+		{
+			updates = new Updates();
+		}
+		return updates;
+	}
+
+	public void setUpdates(Updates updates) {
+		this.updates = updates;
+	}
+	
 	public Querys getQuerys() {
 		if(querys == null)
 		{
@@ -109,6 +123,7 @@ public class ContextBeans implements Serializable{
 	public void setQuerys(Querys querys) {
 		this.querys = querys;
 	}
+
 
 	public RideR getRider() {
 		
