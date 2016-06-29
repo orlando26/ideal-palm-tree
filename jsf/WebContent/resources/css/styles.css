@@ -280,7 +280,7 @@ table.sinmargenes {
 		-moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-}
+} 
 .MapHeader {
 	height: 6.6vh;
 	background: #3366FF;
@@ -298,3 +298,27 @@ table.sinmargenes {
 	color: #FFFFFF;
 	margin-left: 12vw;
 }
+.botoncirculo {
+	width: 15vw !important;
+	height: auto !important;
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.botoncirculo:focus {
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.botoncirculo:active {
+	opacity: 0.8 !important;
+    filter: alpha(opacity=80) !impo rtant;
+	-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.botoncirculo:hover {
+		-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+} 
