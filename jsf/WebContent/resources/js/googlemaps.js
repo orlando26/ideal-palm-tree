@@ -8,3 +8,9 @@ function initMap() {
       disableDefaultUI: true
     });
 }
+
+function finishRide() {
+    console.log("Imagen picada");
+	btn = document.getElementById('mapForm:finish_ride_btn');
+    btn.click();
+}

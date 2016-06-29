@@ -6,13 +6,14 @@
 	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:pm="http://primefaces.org/mobile">
-	
+
   <h:head>
   	<title>Rouge - Ruta</title>
 	<h:outputStylesheet library="css" name="styles.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="jquery.js" />
 	<h:outputScript library="js" name="googlemaps.js" />
+	<c:set var="rideListener" value="#{SessionBeans.rideListener}" />
 	<style>
 		 html, body {
 		 	height: 100%;
@@ -25,16 +26,18 @@
 	</style>
   </h:head>
   <h:body>
-  			<div id="header" class="MapHeader">
+  		<div id="header" class="MapHeader">
   			<h:outputText styleClass="HeaderLabel" id="destination" value="Destino" />
   			<h:outputText styleClass="HeaderLabel" id="distance" value="3 Km" />
   			<h:outputText styleClass="HeaderLabel" id="time" value="1 min"/>
   		</div>
     	<div id="map"></div>
-   			<script async="" defer=""
-     		 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
-    		</script>
-    	<h:graphicImage id="checkin" value="resources/images/btn_checkin.png" />
-
+		<script async="" defer=""
+ 		 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
+		</script>
+		<h:graphicImage id="checkin" value="resources/images/btn_checkin.png" onclick="finishRide()" />
+		<h:form id="mapForm">
+			<p:commandButton id="finish_ride_btn" action="#{rideListener.finishRide}" style="display: none;"/>
+		</h:form>
   </h:body>
 </html>

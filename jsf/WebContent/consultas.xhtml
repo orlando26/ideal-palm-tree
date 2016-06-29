@@ -19,7 +19,7 @@
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
 <body>
-<c:set var="querys" value="#{ContextBeans.querys}" />
+<c:set var="querys" value="#{SessionBeans.querys}" />
 <h:form id ="fChoferes"> 
  <h:dataTable id = "choferes" value="#{querys.users}" var="user">
  <h:column> 
