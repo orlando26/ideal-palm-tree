@@ -53,7 +53,7 @@ public class Ride {
 	//Fecha de finalizacion (timestamp)
 	@Column(name = "rde_end_date")
 	@Type(type="date")
-	private Long endDate;
+	private Date endDate;
 
 	
 	/** Getters & Setters */
@@ -122,11 +122,11 @@ public class Ride {
 		this.startDate = startDate2;
 	}
 
-	public Long getEndDate() {
+	public Date getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Long endDate) {
+	public void setEndDate(Date endDate) {
 		this.endDate = endDate;
 	}	
 }

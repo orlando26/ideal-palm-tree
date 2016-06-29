@@ -10,5 +10,10 @@
 		<managed-bean-class>org.rouge.context.ContextBeans</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>SessionBeans</managed-bean-name>
+		<managed-bean-class>org.rouge.context.SessionBeans</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 
 </faces-config>
