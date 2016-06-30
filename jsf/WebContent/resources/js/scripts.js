@@ -12,8 +12,13 @@ $(function(){
                 
         	}, 10, function() {
         		$('.botoncirculo').animate({
-        			left: '150vw'
-        		},500)
+        			left: '110vw',
+        			opacity: '0'
+        		}, 500, function(){
+        		$('.botoncirculo').animate({
+        			left: '-110vw'
+        		},0)	
+        		})
         	}) ;	
         });
       });
