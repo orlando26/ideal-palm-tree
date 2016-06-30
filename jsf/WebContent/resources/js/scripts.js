@@ -1,15 +1,27 @@
 var rideInterval;
 
 $(function(){
-	$('.botoncirculo').click(function(){
-		this.parent().animate({
-            left: '250px',
-            opacity: '0.5',
-            height: '150px',
-            width: '150px'
+    $('.botoncirculo').click(function(){
+    	$(this).parent().find($('.circulo')).animate({
+            width: '15vw',
+            left: '0%',
+            top: '0%'
+        }, 150, function() {
+        	$(this).parent().find($('.circulo')).animate({
+        		width: '0vw',
+                
+        	}, 10, function() {
+        		$('.botoncirculo').animate({
+        			left: '110vw',
+        			opacity: '0'
+        		}, 500, function(){
+        		$('.botoncirculo').animate({
+        			left: '-110vw'
+        		},0)	
+        		})
+        	}) ;	
         });
-    });
-	
+      });
     $('.boton_numero').click(function(){
         var text = $('#login-form\\:username').val();
         $('#login-form\\:username').val(text + $(this).text());
