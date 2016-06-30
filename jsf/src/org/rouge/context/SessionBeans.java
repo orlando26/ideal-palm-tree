@@ -22,8 +22,6 @@ public class SessionBeans implements Serializable {
 	
 	private Querys querys;
 	
-	private static User userlogged;
-
 	
 	/**
 	 * @return the rideListener bean
@@ -50,20 +48,6 @@ public class SessionBeans implements Serializable {
 
 	public void setQuerys(Querys querys) {
 		this.querys = querys;
-	}
-
-	/**
-	 * @return the userlogged
-	 */
-	public User getUserlogged() {
-		return userlogged;
-	}
-
-	/**
-	 * @param userlogged the userlogged to set
-	 */
-	public static void setUserlogged(User user) {
-		userlogged = user;
 	}
 
 }

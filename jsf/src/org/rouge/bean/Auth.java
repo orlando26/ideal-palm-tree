@@ -1,5 +1,7 @@
 package org.rouge.bean;
 
+import javax.servlet.http.HttpSession;
+
 import org.rouge.context.SessionBeans;
 import org.rouge.db.User;
 import org.rouge.model.UserModel;
@@ -10,21 +12,20 @@ public class Auth extends Form {
 	 * Authentication bean
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private String userName;
-	
+
 	private String password;
-	
+
 	private String imageName;
-	
+
 	public void print(){
 		System.out.println(userName);
 		User user = UserModel.findByUserName(userName);
-		
+
 		if (user.getPassword().equals(Integer.toHexString(password.hashCode()))){
-			//SessionBeans sessionBean = (SessionBeans) getSessionBean("SessionBeans");
-			//sessionBean.setUserlogged(user);
-			SessionBeans.setUserlogged(user);
+			HttpSession session = (HttpSession) getFacesContext().getExternalContext().getSession(true);
+			session.setAttribute("user", user);
 			redirect("/home.xhtml");
 		}else{
 			System.out.println("Contrasena incorrecta");
@@ -74,7 +75,7 @@ public class Auth extends Form {
 	public void setImageName(String imageName) {
 		this.imageName = imageName;
 	}
-	
-	
-	
+
+
+
 }
