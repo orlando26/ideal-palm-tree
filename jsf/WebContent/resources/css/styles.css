@@ -321,7 +321,6 @@ table.sinmargenes {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
-
 .MapHeader {
 	height: 6.6vh;
 	background: #3366FF;
@@ -364,10 +363,22 @@ table.sinmargenes {
 }
 
 .botoncirculo:hover {
+<<<<<<< HEAD
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
+=======
+		-moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+.circulo {
+	position:absolute;
+	opacity:0.5;
+	width: 0vw ;
+	height: auto ;
+>>>>>>> origin/develop
 
 .circulo {
 	position: absolute;
@@ -381,7 +392,14 @@ table.sinmargenes {
 	height: 100vh !important;
 	width: 40vw !important;
 	float: rigth !important;
+<<<<<<< HEAD
 	-webkit-box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 	-moz-box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 	box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 }
+=======
+	-webkit-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	-moz-box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+	box-shadow: 4px 0px 10px 0px rgba(0,0,0,0.19) !important;
+}
+>>>>>>> origin/develop
