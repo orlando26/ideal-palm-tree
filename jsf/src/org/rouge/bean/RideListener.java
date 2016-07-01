@@ -1,36 +1,37 @@
 package org.rouge.bean;
 
+import javax.servlet.http.HttpSession;
+
 import org.hibernate.HibernateException;
-import org.rouge.context.ContextBeans;
-import org.rouge.context.SessionBeans;
 import org.rouge.db.Ride;
+import org.rouge.db.User;
 import org.rouge.model.RideModel;
+import org.rouge.model.Catalogs.RideStatus;
 
 public class RideListener extends Form {
 
 	private Long rideId;
 
-	private Long driver;
+	private User driver;
 
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	public RideListener() {
+		HttpSession session = (HttpSession) getFacesContext().getExternalContext().getSession(true);
+		driver = (User) session.getAttribute("user");
+	}
 
 	public String lookForNewRide() {
-		SessionBeans context = (SessionBeans) getSessionBean("SessionBeans");
-		driver = context.getUserlogged().getId();
-		Integer holdStatus = 1;
-		Integer startedStatus = 2;
 		String url = "";
-
-		System.out.println("Call to the bean");
-		Ride ride = RideModel.findRideByUser(driver, holdStatus);
+		Ride ride = RideModel.findRideByUser(driver.getId(), RideStatus.READY.getValue());
 
 		try {
 			rideId = ride.getId();
 			System.out.println("Id de viaje seleccionado: " + rideId);
-			RideModel.updateRideStatus(rideId, startedStatus);
+			RideModel.updateRideStatus(rideId, RideStatus.STARTED.getValue());
 			url = "map.xhtml?faces-redirect=true";
 		} catch(NullPointerException npe) {
 			//No hay ningun viaje nuevo
@@ -42,12 +43,10 @@ public class RideListener extends Form {
 	}
 
 	public String finishRide() {
-		Integer finishedStatus = 3;
 		String url = "";
-		System.out.println("finishRide called!");
 		try {
 			System.out.println("El id del viaje a finalizar es: " + rideId);
-			RideModel.updateRideStatus(rideId, finishedStatus);
+			RideModel.updateRideStatus(rideId, RideStatus.FINISHED.getValue());
 			url = "home.xhtml?faces-redirect=true";
 			rideId = null;
 		} catch(HibernateException he) {
@@ -55,6 +54,10 @@ public class RideListener extends Form {
 		}
 
 		return url;
+	}
+	
+	public User getDriver() {
+		return driver;
 	}
 
 }
