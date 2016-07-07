@@ -11,6 +11,7 @@
 
 <f:view renderKitId="PRIMEFACES_MOBILE" />
 <h:head>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 	<title>Administrador</title>
 	<style>
 html, body {
@@ -39,41 +40,8 @@ html, body {
 <!--  Inicia Body -->
 <h:body>
 	<h:form id="login-form">
-		<!-- Pagina de registro -->
-		<div data-role="page" id="pagetwo">
-			<div data-role="panel" data-display="overlay" data-position="right"
-				id="Register">
-				<h2>Registrar usuario</h2>
-				<p>Aqui iria la forma de registro</p>
-				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
-					panel</a>
-			</div>
-			</div>
-		<!-- Pagina de busqueda -->
-				<div data-role="page" id="pagethree">
-			<div data-role="panel" data-display="overlay" data-position="right"
-				id="Search">
-				<h2>Busqueda</h2>
-				<p>Aqui iria la forma de busqueda</p>
-				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
-					panel</a>
-			</div>
-			</div>
-		<!-- Pagina de adicion de ruta -->
-				<div data-role="page" id="pagefour">
-			<div data-role="panel" data-display="overlay" data-position="right"
-				id="Route">
-				<h2>Crear ruta</h2>
-				<p>Aqui iria la forma de adicion de ruta</p>
-				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
-					panel</a>
-			</div>	
-			</div>
-			<!-- ventana de mapa con botones de navegacion -->
-			<div data-role="main" id="pageone">
+				<!-- ventana de mapa con botones de navegacion -->
+			<div data-role="page" id="pageone">
 			<div style="padding: 0; margin: 0" data-role="main"
 				class="ui-content">
 				<div style="width: 100vw; height: 100vh" id="map"></div>
@@ -101,15 +69,40 @@ html, body {
 						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
 				</div>
-				<!-- Links para abrir la barra lateral -->
-				<a style="display: none" id="LinkRegister" href="#Register"></a> <a
-					style="display: none" id="LinkSearch" href="#Search"></a> <a
-					style="display: none" id="LinkRoute" href="#Route"></a>
 			</div>
+			<!-- Pagina de registro -->
+			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right" id="Register">
+				<h2>Registrar usuario</h2>
+				<p>Aqui iria la forma de registro</p>
+				<a href="#pageone" data-rel="close"
+					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					panel</a>
+			</div>
+			<!-- Pagina de busqueda -->
+			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right"
+				id="Search">
+				<h2>Busqueda</h2>
+				<p>Aqui iria la forma de busqueda</p>
+				<a href="#pageone" data-rel="close"
+					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					panel</a>
+			</div>
+			<!-- Pagina de adicion de ruta -->
+			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right"
+				id="Route">
+				<h2>Crear ruta</h2>
+				<p>Aqui iria la forma de adicion de ruta</p>
+				<a href="#pageone" data-rel="close"
+					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					panel</a>
+			</div>	
 		</div>
+		<!-- Links para abrir la barra lateral -->
+				<a style="display: none" id="LinkRegister" href="#Register"></a>
+				<a style="display: none" id="LinkSearch" href="#Search"></a> 
+				<a style="display: none" id="LinkRoute" href="#Route"></a>
 	</h:form>
-	<script async="" defer=""
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
+	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
     </script>
 
 </h:body>

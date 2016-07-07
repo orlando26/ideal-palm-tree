@@ -22,48 +22,7 @@ $(function(){
 			$('#LinkRegister')[0].click();
 		}, 500);
 	});
-	//Boton consulta
-	$('.botoncirculo').click(function(){
-		$(this).parent().find($('.circulo')).animate({
-			width: '15vw',
-			left: '0%',
-			top: '0%'
-		}, 150, function() {
-			$(this).parent().find($('.circulo')).animate({
-				width: '0vw',
-
-			}, 10, function() {
-				$('.botoncirculo').animate({
-					left: '110vw',
-					opacity: '0'
-				}, 500)
-			}) ;	
-		});
-		setTimeout(function(){
-			$('#LinkSearch')[0].click();
-		}, 500);
-	});
-	//Boton agregar ruta
-	$('.botoncirculo').click(function(){
-		$(this).parent().find($('.circulo')).animate({
-			width: '15vw',
-			left: '0%',
-			top: '0%'
-		}, 150, function() {
-			$(this).parent().find($('.circulo')).animate({
-				width: '0vw',
-
-			}, 10, function() {
-				$('.botoncirculo').animate({
-					left: '110vw',
-					opacity: '0'
-				}, 500)
-			}) ;	
-		});
-		setTimeout(function(){
-			$('#LinkRoute')[0].click();
-		}, 500);
-	});
+	
 	//Boton cerrar barra lateral
 	
 	//fin de botones admin
