@@ -4,12 +4,12 @@ $(function(){
 	//Boton registro
 	$('.botoncirculo').click(function(){
 		$(this).parent().find($('.circulo')).animate({
-			width: '15vw',
+			height: '24.49122vh',
 			left: '0%',
 			top: '0%'
 		}, 150, function() {
 			$(this).parent().find($('.circulo')).animate({
-				width: '0vw',
+				height: '0vw',
 
 			}, 10, function() {
 				$('.botoncirculo').animate({

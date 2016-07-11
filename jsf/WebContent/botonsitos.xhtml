@@ -42,32 +42,29 @@ html, body {
 	<h:form id="login-form">
 				<!-- ventana de mapa con botones de navegacion -->
 			<div data-role="page" id="pageone">
-			<div style="padding: 0; margin: 0" data-role="main"
-				class="ui-content">
+			<div style="padding: 0; margin: 0" data-role="main">
+				<div id="container">
 				<div style="width: 100vw; height: 100vh" id="map"></div>
-				<div
-					style="position: absolute; left: 79vw !important; top: 68vh !important; width: 15vw !important; height: 15vw !important;">
+				<div id="cajabotones">
+				<div class="botoncontain" style="top:68vh !important;">
 					<h:graphicImage class="botoncirculo"
 						value="resources/images/add_route.png" />
 					<h:graphicImage class="circulo"
-						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
 				</div>
-				<div
-					style="position: absolute; left: 79vw !important; top: 36vh !important; width: 15vw !important; height: 15vw !important;">
+				<div class="botoncontain" style="top:36vh !important;">
 					<h:graphicImage class="botoncirculo"
 						value="resources/images/ver_route.png" />
 					<h:graphicImage class="circulo"
-						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
 				</div>
-				<div
-					style="position: absolute; left: 79vw !important; top: 4vh !important; width: 15vw !important; height: 15vw !important;">
+				<div class="botoncontain" style="top:4vh !important;">
 					<h:graphicImage class="botoncirculo"
 						value="resources/images/add_user.png" />
 					<h:graphicImage class="circulo"
-						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
+				</div>
+				</div>
 				</div>
 			</div>
 			<!-- Pagina de registro -->
