@@ -9,11 +9,12 @@ $(function(){
 			top: '0%'
 		}, 150, function() {
 			$(this).parent().find($('.circulo')).animate({
-				height: '0vw',
-
+				height: '0vh',
+				left: '50%',
+				top: '50%'
 			}, 10, function() {
 				$('.botoncirculo').animate({
-					left: '110vw',
+					right: '-50vw',
 					opacity: '0'
 				}, 500)
 			}) ;	
@@ -24,7 +25,12 @@ $(function(){
 	});
 	
 	//Boton cerrar barra lateral
-	
+	$('#cerrar').click(function(){
+		$('.botoncirculo').animate({
+			right: '0vw',
+			opacity: '1'
+		}, 500)
+	}) ;	
 	//fin de botones admin
 
 	$('.boton_numero').click(function(){

@@ -340,7 +340,7 @@ table.sinmargenes {
 }
 
 .botoncirculo {
-	position:absolute;
+	position: absolute;
 	width: auto !important;
 	height: 28vh !important;
 	-moz-box-shadow: none !important;
@@ -363,17 +363,16 @@ table.sinmargenes {
 }
 
 .botoncirculo:hover {
+
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
-.circulo {	
-	position:absolute !important; 
-	left: 50% !important; 
-	top: 50% !important;
+.circulo {
+	position:absolute;
 	opacity:0.5;
 	width: auto ;
-	height: 3vh ;
+	height: 0vh ;
 }
 .barraderecha {
 	background: white !important;
@@ -384,30 +383,6 @@ table.sinmargenes {
 	-moz-box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 	box-shadow: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 }
+w: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
+}
 
-#container {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-}
-#map,
-#cajabotones {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#cajabotones {
-  z-index: 10;
-}
-.botoncontain {
-	display: flex !important;
-  align-items: center !important;
-	padding: 0 !important;
-	position:absolute !important; 
-	right: 20vw !important; 
-	width: auto !important; 
-	height: 28vh !important;
-	text-align: center !important;
-}

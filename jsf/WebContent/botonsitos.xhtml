@@ -42,37 +42,40 @@ html, body {
 	<h:form id="login-form">
 				<!-- ventana de mapa con botones de navegacion -->
 			<div data-role="page" id="pageone">
-			<div style="padding: 0; margin: 0" data-role="main">
-				<div id="container">
+			<div style="padding: 0; margin: 0" data-role="main"
+				class="ui-content">
 				<div style="width: 100vw; height: 100vh" id="map"></div>
-				<div id="cajabotones">
-				<div class="botoncontain" style="top:68vh !important;">
-					<h:graphicImage class="botoncirculo"
+				<div
+					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 68vh !important; width: 24.49122vh !important; height: 28vh !important;">
+					<h:graphicImage class="botoncirculo" id="btn_rut"
 						value="resources/images/add_route.png" />
-					<div><h:graphicImage class="circulo"
-						value="resources/images/circulo.png" /></div>
+					<h:graphicImage class="circulo"
+						style="left: 50% !important;top: 50% !important;"
+						value="resources/images/circulo.png" />
 				</div>
-				<div class="botoncontain" style="top:36vh !important;">
-					<h:graphicImage class="botoncirculo"
+				<div
+					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 36vh !important; width: 24.49122vh !important; height: 28vh !important;">
+					<h:graphicImage class="botoncirculo" id="btn_ver"
 						value="resources/images/ver_route.png" />
 					<h:graphicImage class="circulo"
+						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
 				</div>
-				<div class="botoncontain" style="top:4vh !important;">
-					<h:graphicImage class="botoncirculo"
+				<div
+					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 4vh !important; width: 24.49122vh !important; height: 28vh !important;">
+					<h:graphicImage class="botoncirculo" id="btn_reg"
 						value="resources/images/add_user.png" />
 					<h:graphicImage class="circulo"
+						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
-				</div>
-				</div>
 				</div>
 			</div>
 			<!-- Pagina de registro -->
-			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right" id="Register">
+			<div data-role="panel" style="width:40vw" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right" id="Register">
 				<h2>Registrar usuario</h2>
 				<p>Aqui iria la forma de registro</p>
 				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					id="cerrar" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
 					panel</a>
 			</div>
 			<!-- Pagina de busqueda -->
