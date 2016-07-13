@@ -3,6 +3,9 @@ var rideInterval;
 $(function(){
 	//Boton registro
 	$('.botoncirculo').click(function(){
+		var elemId = $(this).attr('id');
+		elemId = elemId.substring(11, elemId.length);
+		console.log(elemId);
 		$(this).parent().find($('.circulo')).animate({
 			height: '24.49122vh',
 			left: '0%',
@@ -20,12 +23,18 @@ $(function(){
 			}) ;	
 		});
 		setTimeout(function(){
-			$('#LinkRegister')[0].click();
+			if (elemId == "btn_reg"){
+				$('#LinkRegister')[0].click();
+			} else if (elemId == "btn_ver"){
+				$('#LinkSearch')[0].click();
+			} else if (elemId == "btn_rut"){
+				$('#LinkRoute')[0].click();
+			}
+			
 		}, 500);
 	});
-	
 	//Boton cerrar barra lateral
-	$('#cerrar').click(function(){
+	$('.cerrar').click(function(){
 		$('.botoncirculo').animate({
 			right: '0vw',
 			opacity: '1'
