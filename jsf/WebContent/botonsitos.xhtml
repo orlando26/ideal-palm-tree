@@ -15,13 +15,18 @@
 	<title>Administrador</title>
 	<style>
 html, body {
+
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 #map {
 	height: 100vh;
-	width: 50vw;
+	width: 100vw;
+}
+span{
+     padding:4em 0 0 0;
+    display:inline-block
 }
 </style>
 	<h:outputScript library="js" name="googlemaps.js" />
@@ -37,6 +42,7 @@ html, body {
 	<h:outputStylesheet library="css" name="styles.css" />
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 </f:facet>
+<c:set var="reg" value="#{ContextBeans.register}" />
 <!--  Inicia Body -->
 <h:body>
 	<h:form id="login-form">
@@ -46,24 +52,24 @@ html, body {
 				class="ui-content">
 				<div style="width: 100vw; height: 100vh" id="map"></div>
 				<div
-					style="position: absolute; left: 79vw !important; top: 68vh !important; width: 15vw !important; height: 15vw !important;">
-					<h:graphicImage class="botoncirculo"
+					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 68vh !important; width: 24.49122vh !important; height: 28vh !important;">
+					<h:graphicImage class="botoncirculo" id="btn_rut"
 						value="resources/images/add_route.png" />
 					<h:graphicImage class="circulo"
 						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
 				</div>
 				<div
-					style="position: absolute; left: 79vw !important; top: 36vh !important; width: 15vw !important; height: 15vw !important;">
-					<h:graphicImage class="botoncirculo"
+					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 36vh !important; width: 24.49122vh !important; height: 28vh !important;">
+					<h:graphicImage class="botoncirculo" id="btn_ver"
 						value="resources/images/ver_route.png" />
 					<h:graphicImage class="circulo"
 						style="left: 50% !important;top: 50% !important;"
 						value="resources/images/circulo.png" />
 				</div>
 				<div
-					style="position: absolute; left: 79vw !important; top: 4vh !important; width: 15vw !important; height: 15vw !important;">
-					<h:graphicImage class="botoncirculo"
+					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 4vh !important; width: 24.49122vh !important; height: 28vh !important;">
+					<h:graphicImage class="botoncirculo" id="btn_reg"
 						value="resources/images/add_user.png" />
 					<h:graphicImage class="circulo"
 						style="left: 50% !important;top: 50% !important;"
@@ -71,29 +77,68 @@ html, body {
 				</div>
 			</div>
 			<!-- Pagina de registro -->
-			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right" id="Register">
+			<div data-role="panel" style="width:40vw;" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right" id="Register">
 				<h2>Registrar usuario</h2>
-				<p>Aqui iria la forma de registro</p>
+				<div style="margin:0; padding: 0; width: 100%; height:80vh; overflow-y:auto">
+					<h:form enctype="multipart/form-data">
+						<h:panelGrid columns="2">
+							<label>Nombre</label>
+							<h:inputText value="#{reg.name}"></h:inputText>
+
+							<label>Matricula</label>
+							<h:inputText value="#{reg.username}"></h:inputText>
+
+							<label>Contrasena</label>
+							<h:inputSecret value="#{reg.password}"></h:inputSecret>
+
+							<label>Confirmar contrasena</label>
+							<h:inputSecret value="#{reg.confirmPasword}"></h:inputSecret>
+
+							<label>Email</label>
+							<h:inputText value="#{reg.email}"></h:inputText>
+
+							<label>Telefono</label>
+							<h:inputText value="#{reg.phone}"></h:inputText>
+
+							<label>Active</label>
+							<h:inputText value="#{reg.active}"></h:inputText>
+
+							<label>Jefe</label>
+							<h:inputText value="#{reg.boss}"></h:inputText>
+
+							<label>status</label>
+							<h:inputText value="#{reg.status}"></h:inputText>
+
+							<label>Perfil</label>
+							<h:inputText value="#{reg.profile}"></h:inputText>
+
+						</h:panelGrid>
+						<p:fileUpload value="#{reg.image}" mode="simple" skinSimple="true"></p:fileUpload>
+						<p:commandButton value="Registrar" ajax="false"
+							actionListener="#{reg.registerUser}"></p:commandButton>
+				</h:form>
 				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
-					panel</a>
+					class=" cerrar ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					panel</a>			
+				</div>
+				
 			</div>
 			<!-- Pagina de busqueda -->
-			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right"
+			<div data-role="panel" style="width:40vw" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right"
 				id="Search">
 				<h2>Busqueda</h2>
 				<p>Aqui iria la forma de busqueda</p>
 				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					class=" cerrar ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
 					panel</a>
 			</div>
 			<!-- Pagina de adicion de ruta -->
-			<div data-role="panel" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position="right"
+			<div data-role="panel" style="width:40vw" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right"
 				id="Route">
 				<h2>Crear ruta</h2>
 				<p>Aqui iria la forma de adicion de ruta</p>
 				<a href="#pageone" data-rel="close"
-					class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
+					class=" cerrar ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
 					panel</a>
 			</div>	
 		</div>

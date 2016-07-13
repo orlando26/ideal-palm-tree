@@ -3,28 +3,43 @@ var rideInterval;
 $(function(){
 	//Boton registro
 	$('.botoncirculo').click(function(){
+		var elemId = $(this).attr('id');
+		elemId = elemId.substring(11, elemId.length);
+		console.log(elemId);
 		$(this).parent().find($('.circulo')).animate({
-			width: '15vw',
+			height: '24.49122vh',
 			left: '0%',
 			top: '0%'
 		}, 150, function() {
 			$(this).parent().find($('.circulo')).animate({
-				width: '0vw',
-
+				height: '0vh',
+				left: '50%',
+				top: '50%'
 			}, 10, function() {
 				$('.botoncirculo').animate({
-					left: '110vw',
+					right: '-50vw',
 					opacity: '0'
 				}, 500)
 			}) ;	
 		});
 		setTimeout(function(){
-			$('#LinkRegister')[0].click();
+			if (elemId == "btn_reg"){
+				$('#LinkRegister')[0].click();
+			} else if (elemId == "btn_ver"){
+				$('#LinkSearch')[0].click();
+			} else if (elemId == "btn_rut"){
+				$('#LinkRoute')[0].click();
+			}
+			
 		}, 500);
 	});
-	
 	//Boton cerrar barra lateral
-	
+	$('.cerrar').click(function(){
+		$('.botoncirculo').animate({
+			right: '0vw',
+			opacity: '1'
+		}, 500)
+	}) ;	
 	//fin de botones admin
 
 	$('.boton_numero').click(function(){
