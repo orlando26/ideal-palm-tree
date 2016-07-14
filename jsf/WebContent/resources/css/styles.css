@@ -293,10 +293,10 @@ table.sinmargenes {
 
 #checkin {
 	position: absolute !important;
-	left: 79vw !important;
-	top: 68vh !important;
-	width: 15vw !important;
-	height: auto !important;
+	right: 5vw !important;
+	bottom: 5vh !important;
+	width: auto !important;
+	height: 30vh !important;
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
@@ -386,3 +386,11 @@ table.sinmargenes {
 w: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 }
 
+inputText {
+	height: 10vh !important;
+}
+.cerrar {
+	position:absolute !important;
+	right: 1vw !important;
+	top: 7vh !important;
+}
