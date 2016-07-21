@@ -24,6 +24,7 @@ html, body {
 	<h:outputScript library="js" name="googlemaps.js" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<h:outputScript library="js" name="scripts.js" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'></link>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
@@ -35,7 +36,8 @@ html, body {
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputStylesheet name="grid/grid.css" library="primefaces" />
 </f:facet>
-<c:set var="reg" value="#{ContextBeans.register}" />
+<c:set var="regUser" value="#{ContextBeans.register}" />
+<c:set var="regRide" value="#{ContextBeans.rider}" />
 <!--  Inicia Body -->
 <h:body>
 	<h:form id="login-form">
@@ -75,50 +77,50 @@ html, body {
 				<div style="margin:0; padding: 0 20px 0 0; width: 100%; height:80vh; overflow-y:auto">
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-5"><label>Nombre</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.name}"></h:inputText></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.name}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
-					    <div class="ui-grid-col-5"><label>Matricula</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.username}"></h:inputText></div>
+					    <div class="ui-grid-col-5"><label>Matrícula</label></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.username}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
-					    <div class="ui-grid-col-5"><label>Contrasena</label></div>
-					    <div class="ui-grid-col-7"><h:inputSecret value="#{reg.password}"></h:inputSecret></div>
+					    <div class="ui-grid-col-5"><label>Contraseña</label></div>
+					    <div class="ui-grid-col-7"><h:inputSecret class="inputReg" value="#{regUser.password}"></h:inputSecret></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
-					    <div class="ui-grid-col-5"><label>Confirmar contrasena</label></div>
-					    <div class="ui-grid-col-7"><h:inputSecret value="#{reg.confirmPasword}"></h:inputSecret></div>
+					    <div class="ui-grid-col-5"><label>Confirmar contraseña</label></div>
+					    <div class="ui-grid-col-7"><h:inputSecret class="inputReg" value="#{regUser.confirmPasword}"></h:inputSecret></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
-					    <div class="ui-grid-col-5"><label>Email</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.email}"></h:inputText></div>
+					    <div class="ui-grid-col-5"><label>Correo electrónico</label></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.email}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
-					    <div class="ui-grid-col-5"><label>Telefono</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.phone}"></h:inputText></div>
+					    <div class="ui-grid-col-5"><label>Teléfono</label></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.phone}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-5"><label>Active</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.active}"></h:inputText></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.active}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-5"><label>Jefe</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.boss}"></h:inputText></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.boss}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-5"><label>Status</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.status}"></h:inputText></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.status}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-5"><label>Perfil</label></div>
-					    <div class="ui-grid-col-7"><h:inputText value="#{reg.profile}"></h:inputText></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regUser.profile}"></h:inputText></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
-					    <div class="ui-grid-col-12"><p:fileUpload value="#{reg.image}" mode="simple" skinSimple="true"></p:fileUpload></div>
+					    <div class="ui-grid-col-12"><p:fileUpload value="#{regUser.image}" mode="simple" skinSimple="true"></p:fileUpload></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-12"><p:commandButton value="Registrar" ajax="false"
-							actionListener="#{reg.registerUser}"></p:commandButton></div>
+							actionListener="#{regUser.registerUser}"></p:commandButton></div>
 					</div>
 					<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-7"><a href="#pageone" data-rel="close"
@@ -129,28 +131,47 @@ html, body {
 				
 			</div>
 			<!-- Pagina de busqueda -->
-			<div data-role="panel" style="width:40vw" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right"
-				id="Search">
-				<h2>Busqueda</h2>
-				<p>Aqui iria la forma de busqueda</p>
-				<a href="#pageone" data-rel="close"
-					class=" cerrar ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
-					panel</a>
+			<div data-role="panel" style="width:40vw;" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right" id="Search">
+				<label style="line-height:1.8; font-weight: bold; color: #ed5351; font-size: 40px;">Busqueda</label>
+				<div class="ui-grid ui-grid-responsive">
+					    <div class="ui-grid-col-7"><a href="#pageone" data-rel="close"
+					class=" cerrar ui-icon-delete ui-btn-icon-left" onclick="eraseData()"></a>
+					</div>
+				</div>
+			
 			</div>
 			<!-- Pagina de adicion de ruta -->
-			<div data-role="panel" style="width:40vw" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right"
-				id="Route">
-				<h2>Crear ruta</h2>
-				<p>Aqui iria la forma de adicion de ruta</p>
-				<a href="#pageone" data-rel="close"
-					class=" cerrar ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close
-					panel</a>
-			</div>	
-		</div>
+						<div data-role="panel" style="width:40vw;" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right" id="Route">
+				<label style="line-height:1.8; font-weight: bold; color: #ed5351; font-size: 40px;">Registrar ruta</label>
+				<div style="margin:0; padding: 0 20px 0 0; width: 100%; height:80vh; overflow-y:auto">
+					<div class="ui-grid ui-grid-responsive">
+					    <div class="ui-grid-col-5"><label>Conductor</label></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value="#{regRide.rde_driver_id}"></h:inputText></div>
+					</div>
+					<div class="ui-grid ui-grid-responsive">
+					    <div class="ui-grid-col-5"><label>Dirección de destino</label></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value ="#{regRide.rde_dest}"></h:inputText></div>
+					</div>
+					<div class="ui-grid ui-grid-responsive">
+					    <div class="ui-grid-col-5"><label>Status</label></div>
+					    <div class="ui-grid-col-7"><h:inputText class="inputReg" value ="#{regRide.status}"></h:inputText></div>
+					</div>
+					<div class="ui-grid ui-grid-responsive">
+					    <div class="ui-grid-col-12"><p:commandButton value="Registrar" actionListener="#{regRide.registerRide}"></p:commandButton></div>
+					</div>
+					<div class="ui-grid ui-grid-responsive">
+					    <div class="ui-grid-col-7"><a href="#pageone" data-rel="close"
+					class=" cerrar ui-icon-delete ui-btn-icon-left"></a>
+					</div>
+					</div>
+				</div>
+				
+			</div>
 		<!-- Links para abrir la barra lateral -->
 				<a style="display: none" id="LinkRegister" href="#Register"></a>
 				<a style="display: none" id="LinkSearch" href="#Search"></a> 
 				<a style="display: none" id="LinkRoute" href="#Route"></a>
+	</div>
 	</h:form>
 	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWdOcTzPreLcIdUVyMqdqX1N5gjowhsEY&amp;callback=initMap">
     </script>

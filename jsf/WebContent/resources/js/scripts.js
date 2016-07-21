@@ -39,6 +39,7 @@ $(function(){
 			right: '0vw',
 			opacity: '1'
 		}, 500)
+	$('.inputReg').val('');
 	}) ;	
 	//fin de botones admin
 
