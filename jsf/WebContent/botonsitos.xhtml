@@ -46,6 +46,10 @@ html, body {
 			<div style="padding: 0; margin: 0" data-role="main"
 				class="ui-content">
 				<div style="width: 100vw; height: 100vh" id="map"></div>
+				<div style="margin:0; position: absolute; left: 0 !important; top: 0 !important; width: 10vh !important; height: 10vh !important;">
+				<h:graphicImage style="opacity: 0.5; filter: alpha(opacity=50); width: 10vh !important; height: 10vh !important;" id="cerrar_sesion"
+						value="resources/images/cerrar_sesion.png" />
+				</div>
 				<div
 					style="margin:0 5vw; position: absolute; right: 0vw !important; top: 68vh !important; width: 24.49122vh !important; height: 28vh !important;">
 					<h:graphicImage class="botoncirculo" id="btn_rut"
@@ -132,7 +136,7 @@ html, body {
 			</div>
 			<!-- Pagina de busqueda -->
 			<div data-role="panel" style="width:40vw;" data-dismissible="false" data-swipe-close="false" data-display="overlay" data-position-fixed="true" data-position="right" id="Search">
-				<label style="line-height:1.8; font-weight: bold; color: #ed5351; font-size: 40px;">Busqueda</label>
+				<label style="line-height:1.8; font-weight: bold; color: #ed5351; font-size: 40px;">Búsqueda</label>
 				<div class="ui-grid ui-grid-responsive">
 					    <div class="ui-grid-col-7"><a href="#pageone" data-rel="close"
 					class=" cerrar ui-icon-delete ui-btn-icon-left" onclick="eraseData()"></a>

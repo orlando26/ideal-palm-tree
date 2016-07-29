@@ -1,6 +1,5 @@
 * {
 	font-family: 'Open Sans', sans-serif; !important;
-	font-size: 25px !important;
 }
 
 .ui-focus {
@@ -388,12 +387,13 @@ w: 4px 0px 10px 0px rgba(0, 0, 0, 0.19) !important;
 
 inputText {
 	height: 10vh !important;
+	font-size: 18px !important;
 }
 .cerrar {
 	position:absolute !important;
 	right: 1vw !important;
 	top: 7vh !important;
 }
-inputText {
-	
+label {
+	font-size: 18px !important;
 }
