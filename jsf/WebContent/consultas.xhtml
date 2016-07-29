@@ -1,3 +1,4 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -19,12 +20,9 @@
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
 <body>
-<<<<<<< HEAD
-<c:set var="querys" value="#{ContextBeans.querys}" />
+
 <c:set var="updates" value="#{ContextBeans.updates}" />
-=======
 <c:set var="querys" value="#{SessionBeans.querys}" />
->>>>>>> refs/remotes/origin/develop
 <h:form id ="fChoferes"> 
  <h:dataTable id = "choferes" value="#{querys.users}" var="user">
  <h:column> 
@@ -63,6 +61,7 @@
          </h:commandLink>
       </h:column>
    </h:dataTable>
+     <h:commandButton value = "Actualizar" action = "#{querys.updFDB()}"></h:commandButton>
 </h:form>
 
 

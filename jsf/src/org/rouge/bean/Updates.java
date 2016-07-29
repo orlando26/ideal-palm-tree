@@ -12,6 +12,7 @@ import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.primefaces.model.UploadedFile;
 import org.rouge.db.User;
 import org.rouge.hibernate.HibernateSession;
+import org.rouge.model.UserModel;
 
 public class Updates extends Form{
 
@@ -45,12 +46,13 @@ public class Updates extends Form{
 	private Long editId;
 	
 	
-	public void registerUser(){ 
+	public void updateUser(Long editId){ 
 		FacesContext context = FacesContext.getCurrentInstance();
-		if(password.equals(confirmPasword)){
+		
 			User user;
 			user = new User();
 			
+			System.out.println(editId);
 			user.setName(name);
 			user.setPassword(Integer.toHexString(password.hashCode()));
 			user.setEmail(email);
@@ -60,33 +62,9 @@ public class Updates extends Form{
 			user.setProfile(profile);
 			user.setStatus(status);
 			user.setUsername(username);
-			HibernateSession.saveObject(user);
+			UserModel.updateUser(editId, user);
 			
-			if(image != null){
-				System.out.println("grabando imagen...");
-				try {
-					save(image);
-					System.out.println("Se grabo la imagen correctamente");
-				} catch (IOException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					System.out.println("No se pudo grabar la imagen");
-				}
-			}else{
-				System.out.println("no se encontro la imagen");
-			}
-			
-			/*if(!UserModel.findByUserName(user.getName()).isEmpty()){
-				context.addMessage(null, new FacesMessage("Error",  "El usuario " + user.getName() + " ya existe"));
-			}else{
-				context.addMessage(null, new FacesMessage("Registro exitoso",  "El usuario " + user.getName() + " se registro exitosamente"));
-				HibernateSession.saveObject(user);
-				redirect("/index.xhtml");
-			}*/
-		}else{
-			context.addMessage(null, new FacesMessage("Error",  "Las contrase�as no coinciden "));
-		}
-			
+		
 	}
 	
 	public void save(UploadedFile image) throws IOException {

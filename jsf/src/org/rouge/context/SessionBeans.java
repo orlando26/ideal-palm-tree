@@ -7,6 +7,7 @@ import javax.faces.bean.SessionScoped;
 
 import org.rouge.bean.Querys;
 import org.rouge.bean.RideListener;
+import org.rouge.bean.Updates;
 import org.rouge.db.User;
 
 @ManagedBean
@@ -23,8 +24,21 @@ public class SessionBeans implements Serializable {
 	private Querys querys;
 	
 	private static User userlogged;
+	
+	private Updates updates;
 
 	
+	public Updates getUpdates() {
+		if(updates==null){
+			updates = new Updates();
+		}
+		return updates;
+	}
+
+	public void setUpdates(Updates updates) {
+		this.updates = updates;
+	}
+
 	/**
 	 * @return the rideListener bean
 	 */
@@ -52,6 +66,7 @@ public class SessionBeans implements Serializable {
 		this.querys = querys;
 	}
 
+	
 	/**
 	 * @return the userlogged
 	 */

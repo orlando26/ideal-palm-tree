@@ -21,48 +21,49 @@
 	<h:outputStylesheet library="css" name="jquery.mobile.icons.min.css" />
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
-<c:set var="querys" value="#{ContextBeans.querys}" />
+<c:set var="querys" value="#{SessionBeans.querys}" />
+<c:set var="upd" value="#{SessionBeans.updates}" />
 <h:body>
 	<h:form>
 	
 		<h:panelGrid columns="2">
 		    
 		    <label>ID</label>
-		    <h:outputText value="#{querys.printID}"></h:outputText>
+		    <h:outputText value="#{querys.editID}"></h:outputText>
 			
 			<label>Nombre</label>
-			<h:inputText value="#{reg.name}"></h:inputText>
+			<h:inputText value="#{upd.name}"></h:inputText>
 			
 			<label>Matricula</label>
-			<h:inputText value="#{reg.username}"></h:inputText>
+			<h:inputText value="#{upd.username}"></h:inputText>
 			
 			<label>Contrasena</label>
-			<h:inputSecret value="#{reg.password}"></h:inputSecret>
+			<h:inputSecret value="#{upd.password}"></h:inputSecret>
 			
 			<label>Confirmar contrasena</label>
-			<h:inputSecret value="#{reg.confirmPasword}"></h:inputSecret>
+			<h:inputSecret value="#{upd.confirmPasword}"></h:inputSecret>
 			
 			<label>Email</label>
-			<h:inputText value="#{reg.email}"></h:inputText>
+			<h:inputText value="#{upd.email}"></h:inputText>
 			
 			<label>Telefono</label>
-			<h:inputText value="#{reg.phone}"></h:inputText>
+			<h:inputText value="#{upd.phone}"></h:inputText>
 			
 			<label>Active</label>
-			<h:inputText value="#{reg.active}"></h:inputText>
+			<h:inputText value="#{upd.active}"></h:inputText>
 			
 			<label>Jefe</label>
-			<h:inputText value="#{reg.boss}"></h:inputText>
+			<h:inputText value="#{upd.boss}"></h:inputText>
 			
 			<label>status</label>
-			<h:inputText value="#{reg.status}"></h:inputText>
+			<h:inputText value="#{upd.status}"></h:inputText>
 			
 			<label>Perfil</label>
-			<h:inputText value="#{reg.profile}"></h:inputText>
+			<h:inputText value="#{upd.profile}"></h:inputText>
 
 		</h:panelGrid>
-		<button>boton</button>
-		<p:commandButton value="Registrar" actionListener="#{reg.registerUser}"></p:commandButton>
+		<p:commandButton value="Actualizar" actionListener="#{upd.updateUser(querys.editID)}"></p:commandButton>
+		<p:commandButton value="Volver" actionListener="#{querys.updFDB}"  ></p:commandButton>
 	</h:form>
 
 </h:body>

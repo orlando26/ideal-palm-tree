@@ -7,11 +7,10 @@ import javax.faces.bean.RequestScoped;
 import org.rouge.bean.Auth;
 import org.rouge.bean.Register;
 import org.rouge.bean.RideR;
-<<<<<<< HEAD
+
 import org.rouge.bean.Updates;
-import org.rouge.db.User;
-=======
->>>>>>> refs/remotes/origin/develop
+
+
 
 @ManagedBean
 @RequestScoped
@@ -63,48 +62,7 @@ public class ContextBeans implements Serializable{
 		this.register = register;
 	}
 
-<<<<<<< HEAD
-	/**
-	 * @return the userlogged
-	 */
-	public User getUserlogged() {
-		return userlogged;
-	}
 
-	/**
-	 * @param userlogged the userlogged to set
-	 */
-	public static void setUserlogged(User user) {
-		userlogged = user;
-	}
-
-	public Updates getUpdates() {
-		if(updates == null)
-		{
-			updates = new Updates();
-		}
-		return updates;
-	}
-
-	public void setUpdates(Updates updates) {
-		this.updates = updates;
-	}
-	
-	public Querys getQuerys() {
-		if(querys == null)
-		{
-			querys = new Querys();
-		}
-		return querys;
-	}
-
-	public void setQuerys(Querys querys) {
-		this.querys = querys;
-	}
-
-
-=======
->>>>>>> refs/remotes/origin/develop
 	public RideR getRider() {
 		
 		if(rider == null)
@@ -116,6 +74,18 @@ public class ContextBeans implements Serializable{
 
 	public void setRider(RideR rider) {
 		this.rider = rider;
+	}
+
+	public Updates getUpdates() {
+		if(updates==null){
+			updates = new Updates();
+		}
+		return updates;
+	}
+
+	public void setUpdates(Updates updates) {
+		this.updates = updates;
+		
 	}
 
 }

@@ -28,6 +28,7 @@ public class Querys extends Form {
 		setUsers(UserModel.findAll());
 	}
 	public List<User> getUsers() {
+		
 		return users;
 	}
 	public void setUsers(List<User> users) {
@@ -35,16 +36,21 @@ public class Querys extends Form {
 	}
 	public void deleteUsers(Long id){
 		UserModel.deleteById(id);
+		setUsers(UserModel.findAll());
+		
 	}
 	
 	public void update(Long id){
-		this.editID= id;
+		this.editID= id;		
 		System.out.println("El id seleccionado es: " + editID);
 		redirect("/actualizarDatos.xhtml");
-	
 	}
-	public  Long printID(Long editID){
-		return editID;
+	
+	public void requests(){
+		redirect("/consultas.xhtml");
+	}
+	public void updFDB(){
+		setUsers(UserModel.findAll()); 
 		
 		
 	}
