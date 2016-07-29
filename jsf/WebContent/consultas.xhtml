@@ -1,3 +1,4 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
@@ -19,6 +20,8 @@
 	<h:outputScript library="js" name="scripts.js" />
 </f:facet>
 <body>
+
+<c:set var="updates" value="#{ContextBeans.updates}" />
 <c:set var="querys" value="#{SessionBeans.querys}" />
 <h:form id ="fChoferes"> 
  <h:dataTable id = "choferes" value="#{querys.users}" var="user">
@@ -45,12 +48,9 @@
          <f:facet name="header">
             <h:outputText value="    "></h:outputText>
          </f:facet>
-         <h:commandLink value= "Editar"  >
-         <f:actionListener binding="#{querys.receipId(user.id)}"/>
-          <f:actionListener    />
-         
-         
-         ></h:commandLink>
+         <h:commandLink value= "Editar"  actionListener="#{querys.update(user.id)}">
+         <f:setPropertyActionListener target= "#{updates.editId}" value= "#{user.id}" />
+    </h:commandLink>
       </h:column>
       <h:column>
          <f:facet name="header">
@@ -61,6 +61,7 @@
          </h:commandLink>
       </h:column>
    </h:dataTable>
+     <h:commandButton value = "Actualizar" action = "#{querys.updFDB()}"></h:commandButton>
 </h:form>
 
 
