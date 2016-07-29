@@ -6,6 +6,7 @@ import org.hibernate.HibernateException;
 import org.rouge.db.Ride;
 import org.rouge.db.User;
 import org.rouge.model.RideModel;
+import org.rouge.resources.SessionUtils;
 import org.rouge.model.Catalogs.RideStatus;
 
 public class RideListener extends Form {
@@ -20,8 +21,8 @@ public class RideListener extends Form {
 	private static final long serialVersionUID = 1L;
 	
 	public RideListener() {
-		HttpSession session = (HttpSession) getFacesContext().getExternalContext().getSession(true);
-		driver = (User) session.getAttribute("user");
+		
+		driver = SessionUtils.getUser();
 	}
 
 	public String lookForNewRide() {

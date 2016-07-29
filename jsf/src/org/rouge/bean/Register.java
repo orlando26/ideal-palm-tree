@@ -1,15 +1,8 @@
 package org.rouge.bean;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.primefaces.model.UploadedFile;
 import org.rouge.db.User;
 import org.rouge.hibernate.HibernateSession;

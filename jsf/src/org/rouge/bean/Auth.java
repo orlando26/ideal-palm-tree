@@ -5,6 +5,7 @@ import javax.servlet.http.HttpSession;
 import org.rouge.context.SessionBeans;
 import org.rouge.db.User;
 import org.rouge.model.UserModel;
+import org.rouge.resources.SessionUtils;
 
 public class Auth extends Form {
 
@@ -24,13 +25,17 @@ public class Auth extends Form {
 		User user = UserModel.findByUserName(userName);
 
 		if (user.getPassword().equals(Integer.toHexString(password.hashCode()))){
-			HttpSession session = (HttpSession) getFacesContext().getExternalContext().getSession(true);
-			session.setAttribute("user", user);
+			SessionUtils.setUserLogged(user);
 			redirect("/home.xhtml");
 		}else{
 			System.out.println("Contrasena incorrecta");
 		}
 		System.out.println("Encontro al usuario " + user.getName());
+	}
+	
+	public String logout(){
+		SessionUtils.getSession().invalidate();
+		return "/index.xhtml";
 	}
 
 	/**

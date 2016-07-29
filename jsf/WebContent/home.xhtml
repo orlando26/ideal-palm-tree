@@ -32,6 +32,9 @@
 					<label class="t2">#{rideListener.driver.name}</label> <label class="t3">Compa&#241;&#237;a</label>
 					<label class="t3">#{rideListener.driver.username}</label> <label class="t4">#7</label>
 				</div>
+				<h:form id="form">
+				<h:commandLink value="Log out" action="#{auth.logout}"></h:commandLink>
+				</h:form>
 			</div>
 		</div>
 		<div class="ui-block-b" style="width: 58%; height:auto">
@@ -61,6 +64,7 @@
 	</div>
 	<h:form id="rideForm">
 		<p:commandButton id="ride_listener_btn" style="display: none;" action="#{rideListener.lookForNewRide}"/>
+		
 	</h:form>
 	<script type="text/javascript">
 		$(function(){
