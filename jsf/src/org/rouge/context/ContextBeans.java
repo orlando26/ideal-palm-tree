@@ -8,6 +8,10 @@ import org.rouge.bean.Auth;
 import org.rouge.bean.Register;
 import org.rouge.bean.RideR;
 
+import org.rouge.bean.Updates;
+
+
+
 @ManagedBean
 @RequestScoped
 public class ContextBeans implements Serializable{
@@ -23,6 +27,7 @@ public class ContextBeans implements Serializable{
 			
 	private RideR rider;
 
+	private Updates updates;
 	/**
 	 * @return the authentication
 	 */
@@ -57,6 +62,7 @@ public class ContextBeans implements Serializable{
 		this.register = register;
 	}
 
+
 	public RideR getRider() {
 		
 		if(rider == null)
@@ -68,6 +74,18 @@ public class ContextBeans implements Serializable{
 
 	public void setRider(RideR rider) {
 		this.rider = rider;
+	}
+
+	public Updates getUpdates() {
+		if(updates==null){
+			updates = new Updates();
+		}
+		return updates;
+	}
+
+	public void setUpdates(Updates updates) {
+		this.updates = updates;
+		
 	}
 
 }
